@@ -1,0 +1,312 @@
+/* ================= CONFIGURAÇÕES GERAIS ================= */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F7F7F7;
+    color: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================= HEADER ================= */
+
+.topo-site {
+    background: #E86A00;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-site {
+    height: 120px;
+    width: auto;
+    animation: logoEntrada 1.2s ease forwards;
+}
+
+
+/* Menu */
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* links do menu */
+.menu-navegacao a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+
+    position: relative;
+    /* necessário para a barra */
+}
+
+/* mudança de cor ao passar o mouse */
+.menu-navegacao a:hover {
+    color: #C8A45A;
+}
+
+/* barra abaixo do menu */
+.menu-navegacao a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #C8A45A;
+
+    transition: 0.3s;
+}
+
+/* animação da barra */
+.menu-navegacao a:hover::after {
+    width: 100%;
+}
+
+
+/* ================= BANNER ================= */
+
+.banner-principal {
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("imagens/banner_olho.png");
+
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.banner-principal h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner-principal p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.banner-principal button {
+    margin-top: 20px;
+}
+
+
+/* ================= SEÇÕES DO SITE ================= */
+
+.secao-site {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+
+    /* compensa a altura do header */
+    scroll-margin-top: 140px;
+}
+
+
+/* ================= CARDS ================= */
+
+.card-info {
+    background: #FFF1E6;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+
+/* ================= SERVIÇOS ================= */
+
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+/* ================= MÉDICOS ================= */
+
+.lista-medicos {
+    display: flex;
+    justify-content: center;
+}
+
+.card-medico {
+    text-align: center;
+}
+
+
+/* ================= BOTÕES ================= */
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #EA580C;
+    color: #f3f3f3;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* botão do tema (claro / escuro) */
+.botao-tema {
+    border: 2px solid white;
+    border-radius: 50px;
+
+    padding: 6px 8px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+
+    /* botão azul quando aparece a LUA */
+    background: #3b82f6;
+}
+
+/* tamanho do ícone */
+#icone-tema {
+    width: 22px;
+    height: 22px;
+}
+
+/* efeito ao passar o mouse */
+.botao-tema:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+
+/* ===== quando ativa modo escuro ===== */
+
+.modo-escuro .botao-tema {
+    background: #f97316;
+    /* laranja quando aparece o SOL */
+    border: 2px solid #ea580c;
+}
+
+/* ================= MAPA ================= */
+
+iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 10px;
+}
+
+
+/* ================= CONTATO ================= */
+
+.lista-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-contato {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 300px;
+}
+
+
+/* ================= RODAPÉ ================= */
+
+.rodape-site {
+    background: #E86A00;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* ================= DARK MODE ================= */
+
+.modo-escuro {
+    background: #030525;
+    color: white;
+}
+
+.modo-escuro .card-info {
+    background: #0d0055;
+}
+
+.modo-escuro .topo-site {
+    background: #01031b;
+}
+
+.modo-escuro .rodape-site {
+    background: #01031b;
+}
+
+.modo-escuro button {
+    background: #FF8C42;
+    color: white;
+}
+
+.modo-escuro button:hover {
+    background: #ff7a26;
+}
+
+
+/* ================= ANIMAÇÃO DA LOGO ================= */
+
+@keyframes logoEntrada {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+}

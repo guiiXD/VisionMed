@@ -1,0 +1,8 @@
+- Botão de Agendar consulta leve para um link do whatsapp da clínica (quando tiver o zap separado)
+- Informações de contato clicaveis levando para seus respectivos caminhos
+- Animação do olho piscando ao passar o mouse (logo do visionmed)
+- Tirar essa ideia do site ser uma lista de itens, não gosto dessa idéia 
+- Um carrosel mostrando todos exames que fazem na clinica (topofrafia/campo visual/mapeamento de retina)
+- Algum lugar que mostre todos convênios que são aceitos e o preço da consulta particular (pix/cartão)
+- Não acho que essa aba de nossa equipe seja boa, poderia tirar 
+- Sinto a header muito vazia (não sei se seria uma boa idéia adicionar mais coisa dentro dela)

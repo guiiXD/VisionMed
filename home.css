@@ -15,7 +15,14 @@ html {
 /* ================= HEADER ================= */
 
 .topo-site {
-    background: #E86A00;
+    background: rgba(232, 106, 0, 0.65);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
     padding: 20px;
 
     display: flex;
@@ -41,6 +48,43 @@ html {
     animation: logoEntrada 1.2s ease forwards;
 }
 
+.titulo-clinica {
+    display: inline-block;
+    margin-left: 15px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+
+    opacity: 0;
+    transform: translateX(-20px);
+
+    animation: tituloEntrada 1s ease forwards;
+    animation-delay: 0.35s;
+
+    transition: transform 0.3s ease, letter-spacing 0.3s ease, text-shadow 0.3s ease;
+}
+
+@keyframes tituloEntrada {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.titulo-clinica:hover {
+    transform: translateY(-2px);
+    letter-spacing: 6px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
 
 /* Menu */
 
@@ -102,7 +146,7 @@ html {
 
     width: 100%;
     max-width: none;
-    margin: 0;
+    margin-top: -160px;
 
     height: 100vh;
 
@@ -121,13 +165,24 @@ html {
 }
 
 .banner-principal p {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .banner-principal button {
-    margin-top: 20px;
+
+    margin-top: 50px;
+
+    padding: 18px 36px;
+
+    font-size: 30px;
+
+    border-radius: 50px;
+
 }
 
+.banner-principal button:hover {
+    transform: scale(1.05);
+}
 
 /* ================= SEÇÕES DO SITE ================= */
 
@@ -148,15 +203,6 @@ html {
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
-}
-
-
-/* ================= SERVIÇOS ================= */
-
-.lista-servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
 }
 
 
@@ -186,6 +232,7 @@ button {
 }
 
 button:hover {
+    background: #ff7a26;
     opacity: 0.9;
 }
 
@@ -205,7 +252,7 @@ button:hover {
     transition: 0.2s;
 
     /* botão azul quando aparece a LUA */
-    background: #3b82f6;
+    background: #01112b;
 }
 
 /* tamanho do ícone */
@@ -216,6 +263,7 @@ button:hover {
 
 /* efeito ao passar o mouse */
 .botao-tema:hover {
+    background: #01112b;
     transform: scale(1.1);
     transition: 0.2s;
 }
@@ -278,7 +326,16 @@ iframe {
 }
 
 .modo-escuro .topo-site {
-    background: #01031b;
+
+    background: rgba(1, 3, 27, 0.65);
+
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+
 }
 
 .modo-escuro .rodape-site {
@@ -286,8 +343,7 @@ iframe {
 }
 
 .modo-escuro button {
-    background: #FF8C42;
-    color: white;
+    background: #E86A00;
 }
 
 .modo-escuro button:hover {
@@ -309,4 +365,394 @@ iframe {
         transform: translateY(10px);
     }
 
+}
+
+
+/* ================= HOVER NA LOGO ================= */
+
+.logo-site {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-container:hover .logo-site {
+
+    transform: scale(1.50);
+
+    filter: brightness(1.15);
+
+}
+
+.whatsapp-float {
+
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    background: #075222;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+
+    z-index: 999;
+
+    transition: 0.3s;
+
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.4);
+}
+
+.secao-site {
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition: 0.6s;
+
+}
+
+.secao-visivel {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+/*ABA DE SOBRE */
+
+.sobre-clinica {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 20px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.sobre-tag {
+    display: inline-block;
+    background: rgba(232, 106, 0, 0.12);
+    color: #c25f0f;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.sobre-texto h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #2e2e2e;
+}
+
+.sobre-destaques {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-destaque {
+    background: #fff;
+    margin-top: 40px;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(232, 106, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-destaque:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-destaque h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #e86a00;
+    font-size: 20px;
+}
+
+.card-destaque p {
+    margin: 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* ================= SOBRE NO MODO ESCURO ================= */
+
+.modo-escuro .sobre-clinica {
+    background: transparent;
+}
+
+.modo-escuro .sobre-tag {
+    background: rgba(232, 106, 0, 0.16);
+    color: #ff8c42;
+}
+
+.modo-escuro .sobre-texto h2 {
+    color: #ffffff;
+}
+
+.modo-escuro .sobre-texto p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.modo-escuro .card-destaque {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.modo-escuro .card-destaque h3 {
+    color: #ff8c42;
+}
+
+.modo-escuro .card-destaque p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.modo-escuro .card-destaque:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+/* ================= EXAMES REALIZADOS AQUI ================= */
+
+.secao-exames {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 20px;
+    transition: none;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.titulo-secao p {
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 18px;
+    transition: none;
+}
+
+.carrossel-exames {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-exame {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: #fff;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    transition: none !important;
+}
+
+.slide-exame.ativo {
+    display: flex;
+}
+
+.slide-imagem {
+    flex: 1;
+}
+
+.slide-imagem img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+.slide-conteudo {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.slide-conteudo p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    max-width: none;
+    width: 100%;
+}
+
+.slide-conteudo h3 {
+    font-size: 30px;
+    margin-bottom: 18px;
+    color: #E86A00;
+}
+
+
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 2;
+
+    background: #E86A00;
+    color: white;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+
+    padding: 0;
+}
+
+.carrossel-btn.prev {
+    left: -10px;
+}
+
+.carrossel-btn.next {
+    right: -10px;
+}
+
+.indicadores-exames {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(232, 106, 0, 0.30);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.indicador.ativo {
+    background: #E86A00;
+    transform: scale(1.6);
+}
+
+.carrossel-viewport {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    transition: none !important;
+}
+
+.carrossel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+#exames {
+    scroll-margin-top: 80px;
+}
+
+
+/* ================= EXAMES NO MODO ESCURO ================= */
+
+.modo-escuro .secao-exames {
+    background: #030525;
+}
+
+.modo-escuro .titulo-secao h2 {
+    color: #ffffff;
+}
+
+.modo-escuro .titulo-secao p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.modo-escuro .carrossel-viewport {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.modo-escuro .slide-exame {
+    background: transparent;
+}
+
+.modo-escuro .slide-conteudo h3 {
+    color: #ff8c42;
+}
+
+.modo-escuro .slide-conteudo p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.modo-escuro .indicador {
+    background: rgba(255, 140, 66, 0.30);
+}
+
+.modo-escuro .indicador.ativo {
+    background: #ff8c42;
+}
+
+.modo-escuro .carrossel-btn {
+    background: #ff8c42;
+    color: white;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.modo-escuro .carrossel-btn:hover {
+    background: #ff7a26;
 }

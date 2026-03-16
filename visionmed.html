@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<!-- ================= CONFIGURAÇÕES BASICAS DO SITE ================= -->
+
 <head>
 
-    <!-- Configurações básicas do site -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" type="image/png" href="imagens/icone.png">
     <title>VisionMed - Centro Oftalmológico</title>
-
-    <!-- Arquivo de estilos -->
     <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -21,7 +21,10 @@
 
         <!-- Logo da clínica -->
         <div class="logo-container">
+
             <img src="imagens/logo.png" alt="VisionMed Logo" class="logo-site">
+            <h1 class="titulo-clinica">VISIONMED</h1>
+
         </div>
 
         <!-- Área do menu -->
@@ -31,8 +34,8 @@
             <nav class="menu-navegacao">
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre</a>
-                <a href="#medicos">Médicos</a>
-                <a href="#servicos">Serviços</a>
+                <a href="#exames">Exames</a>
+                <a href="#convenios">Convênios</a>
                 <a href="#localizacao">Localização</a>
                 <a href="#contato">Contato</a>
             </nav>
@@ -49,139 +52,383 @@
 
     <!-- ================= BANNER PRINCIPAL ================= -->
     <section id="inicio" class="banner-principal">
-
-        <h2>Visionmed Centro Oftalmológico</h2>
+        <h2>VISIONMED</h2>
+        <h2>Centro Oftalmológico</h2>
 
         <p>
             Somos especialistas em cuidado e saúde da visão com tecnologia moderna.
         </p>
 
-        <button>Agendar Consulta</button>
+        <p class="horario-banner">
+            Horário de atendimento:
+            <strong>segunda a sexta, das 9h às 18h</strong>
+            e
+            <strong>sábado, das 9h às 12h</strong>
+        </p>
 
+        <a href="https://wa.me/556182576862?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+            class="botao-banner">
+            Agendar Consulta
+        </a>
     </section>
-
 
     <!-- ================= SOBRE A CLÍNICA ================= -->
-    <section id="sobre" class="secao-site">
+    <section id="sobre" class="secao-site sobre-clinica">
 
-        <h2>Sobre a Clínica:</h2>
-
-        <div class="card-info">
+        <div class="sobre-texto">
+            <span class="sobre-tag">Cuidado, Confiança, Experiencia</span>
+            <h2>Sobre a Clínica:</h2>
 
             <p>
-                A VisionMed é uma clínica especializada em oftalmologia com mais de 20 anos de história,
-                oferece exames modernos, um diagnóstico preciso e atendimento humanizado.
-                Agende já sua consulta!
+                A VisionMed é uma clínica especializada em oftalmologia dedicada ao cuidado completo da saúde ocular.
+                Com mais de 20 anos de experiência, unimos atendimento humanizado, tecnologia moderna e diagnóstico
+                preciso
+                para oferecer mais segurança e tranquilidade aos nossos pacientes.
             </p>
 
+            <p>
+                Nosso compromisso é proporcionar um atendimento acolhedor, com atenção em cada detalhe, explicações
+                claras
+                e acompanhamento individual. Mais do que realizar exames, buscamos orientar e cuidar de cada paciente
+                de forma próxima e responsável.
+            </p>
+
+            <p>
+                Contamos com estrutura preparada para a realização de diversos exames oftalmológicos, contribuindo para
+                prevenção, diagnóstico e acompanhamento da saúde visual com qualidade e confiança.
+            </p>
+        </div>
+
+        <div class="sobre-destaques">
+            <div class="card-destaque">
+                <h3>Atendimento Humanizado</h3>
+                <p>Cuidado próximo, acolhedor e com atenção individual em cada consulta.</p>
+            </div>
+
+            <div class="card-destaque">
+                <h3>Tecnologia Moderna</h3>
+                <p>Equipamentos atualizados para exames oftalmológicos com mais precisão.</p>
+            </div>
+
+            <div class="card-destaque">
+                <h3>Experiência e Confiança</h3>
+                <p>Mais de 20 anos dedicados à saúde ocular e ao bem-estar dos pacientes.</p>
+            </div>
         </div>
 
     </section>
 
+    <!-- ================== EXAMES REALIZADOS AQUI ======================== -->
 
-    <!-- ================= MÉDICOS ================= -->
-    <section id="medicos" class="secao-site">
+    <section id="exames" class="secao-site secao-exames">
 
-        <h2>Nossa Equipe:</h2>
+        <div class="titulo-secao">
+            <span class="sobre-tag">Tecnologia e Precisão</span>
+            <h2>Exames Realizados:</h2>
+            <p>
+                Conheça alguns dos principais exames realizados na clínica para avaliação, prevenção e
+                acompanhamento da saúde ocular.
+            </p>
+        </div>
 
-        <div class="lista-medicos">
+        <div class="carrossel-exames">
 
-            <div class="card-medico">
+            <button class="carrossel-btn prev" onclick="mudarSlide(-1)">‹</button>
 
-                <img src="imagens/medico.png" alt="Médico">
+            <div class="carrossel-viewport">
+                <div class="carrossel-track">
 
-                <h3>Dra. Sissi Pinheiro Rodrigues</h3>
+                    <div class="slide-exame ativo">
+                        <div class="slide-imagem">
+                            <img src="imagens/topografia.png" alt="Topografia de Córnea">
+                        </div>
 
-                <p>Especialista em Oftalmologia com ** anos de experiência</p>
+                        <div class="slide-conteudo">
+                            <h3>Topografia de Córnea</h3>
+                            <p>
+                                Exame que avalia a curvatura da córnea, auxiliando no diagnóstico de alterações
+                                corneanas e no acompanhamento de diversas condições visuais.
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="slide-exame">
+                        <div class="slide-imagem">
+                            <img src="imagens/campo-visual.png" alt="Campo Visual">
+                        </div>
+
+                        <div class="slide-conteudo">
+                            <h3>Campo Visual</h3>
+                            <p>
+                                Exame utilizado para analisar a visão periférica e identificar possíveis alterações
+                                relacionadas a doenças oculares e neurológicas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide-exame">
+                        <div class="slide-imagem">
+                            <img src="imagens/mapeamento-retina.png" alt="Mapeamento de Retina">
+                        </div>
+
+                        <div class="slide-conteudo">
+                            <h3>Mapeamento de Retina</h3>
+                            <p>
+                                Permite uma avaliação detalhada do fundo do olho, contribuindo para a prevenção,
+                                diagnóstico e acompanhamento de alterações na retina.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <button class="carrossel-btn next" onclick="mudarSlide(1)">›</button>
+
+        </div>
+
+        <div class="indicadores-exames">
+            <span class="indicador ativo" onclick="irParaSlide(0)"></span>
+            <span class="indicador" onclick="irParaSlide(1)"></span>
+            <span class="indicador" onclick="irParaSlide(2)"></span>
+        </div>
+
+    </section>
+
+    <!-- ==================== CONVÊNIOS ================================-->
+
+    <section id="convenios" class="secao-site secao-convenios">
+
+        <div class="convenios-topo">
+            <span class="sobre-tag">Facilidade no Atendimento</span>
+            <h2>Convênios e Atendimento</h2>
+            <p>
+                A VisionMed busca oferecer mais praticidade no cuidado com a sua saúde ocular.
+                Atendemos pacientes particulares e trabalhamos com convênios selecionados.
+                Entre em contato para confirmar cobertura, elegibilidade e condições de atendimento.
+            </p>
+        </div>
+
+        <div class="convenios-grid">
+
+            <div class="convenio-card">
+                <div class="convenio-icone">S</div>
+                <div class="convenio-info">
+                    <h3>Saúde Caixa</h3>
+                    <p>Consulte a cobertura e as condições de atendimento no momento do agendamento.</p>
+                </div>
+            </div>
+
+            <div class="convenio-card">
+                <div class="convenio-icone">G</div>
+                <div class="convenio-info">
+                    <h3>GDF Saúde</h3>
+                    <p>Verifique com nossa equipe a elegibilidade e os detalhes do seu atendimento.</p>
+                </div>
+            </div>
+
+            <div class="convenio-card">
+                <div class="convenio-icone">C</div>
+                <div class="convenio-info">
+                    <h3>Casembrapa</h3>
+                    <p>Entre em contato para confirmar cobertura, autorização e disponibilidade.</p>
+                </div>
+            </div>
+
+            <div class="convenio-card">
+                <div class="convenio-icone">F</div>
+                <div class="convenio-info">
+                    <h3>Fascal</h3>
+                    <p>Confirme com antecedência as condições de atendimento e cobertura do convênio.</p>
+                </div>
+            </div>
+            <div class="convenio-card destaque-particular">
+                <div class="convenio-icone">+</div>
+                <div class="convenio-info">
+                    <h3>Atendimento Particular</h3>
+                    <p>Opção disponível com agendamento prático e atendimento especializado.</p>
+                </div>
+            </div>
+
+            <div class="convenio-card destaque-contato">
+                <div class="convenio-info">
+                    <h3>Não encontrou seu convênio?</h3>
+                    <p>
+                        Fale com nossa equipe para confirmar cobertura, orientações e formas de atendimento.
+                    </p>
+                    <a href="https://wa.me/5561982576862" target="_blank" class="botao-convenios">
+                        Consultar pelo WhatsApp
+                    </a>
+                </div>
             </div>
 
         </div>
 
     </section>
-
-
-    <!-- ================= SERVIÇOS ================= -->
-    <section id="servicos" class="secao-site">
-
-        <h2>Serviços:</h2>
-
-        <div class="lista-servicos">
-
-            <div class="card-info">Consulta Oftalmológica</div>
-            <div class="card-info">Exame de Vista</div>
-            <div class="card-info">Mapeamento de Retina</div>
-
-        </div>
-
-    </section>
-
 
     <!-- ================= LOCALIZAÇÃO ================= -->
-    <section id="localizacao" class="secao-site">
+    <section id="localizacao" class="secao-site secao-localizacao">
 
-        <h2>Localização:</h2>
+        <div class="localizacao-conteudo">
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3968792910764!2d-48.0566459!3d-15.835724699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a337d52534c71%3A0xce0585265fe185e2!2sVision%20Med%2FDra.Sissi%20Rodrigues!5e0!3m2!1spt-BR!2sbr!4v1773165484737!5m2!1spt-BR!2sbr">
-        </iframe>
+            <div class="localizacao-info">
+                <span class="sobre-tag">Onde Estamos</span>
+                <h2>Localização:</h2>
+
+                <p>
+                    Estamos em uma localização de fácil acesso para oferecer mais praticidade
+                    no seu atendimento.
+                </p>
+
+                <div class="card-endereco">
+                    <h3>VisionMed - Centro Oftalmológico</h3>
+                    <p>CSB 02 lote 1/4 - Alameda shopping - torre A - Salas 301/303</p>
+                    <p>CEP: 72015-000</p>
+                    <p>Taguatinga - DF</p>
+                </div>
+
+                <a href="https://www.google.com/maps/place/Vision+Med%2FDra.Sissi+Rodrigues/data=!4m2!3m1!1s0x0:0xce0585265fe185e2?sa=X&ved=1t:2428&ictx=111"
+                    target="_blank" class="botao-localizacao">
+                    Ver no Google Maps
+                </a>
+            </div>
+
+            <div class="localizacao-mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3968792910764!2d-48.0566459!3d-15.835724699999998!2m3!1f0!
+                    2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a337d52534c71%3A0xce0585265fe185e2!2sVision%20Med%2FDra.Sissi%20Rodrigues!5
+                    e0!3m2!1spt-BR!2sbr!4v1773165484737!5m2!1spt-BR!2sbr">
+                </iframe>
+            </div>
+
+        </div>
 
     </section>
 
 
-    <!-- ================= RODAPÉ ================= -->
-    <footer class="rodape-site">
+    <!-- ================= CONTATOS ================= -->
+    <section id="contato" class="secao-contato">
 
-        <!-- Contato -->
-        <section id="contato" class="secao-contato">
+        <span class="sobre-tag">Fale Conosco</span>
 
-            <h2>Contato:</h2>
+        <h2>Contatos:</h2>
+        <p class="texto-contato">
+            Fale com a VisionMed e agende seu atendimento com mais praticidade.
+        </p>
 
-            <div class="lista-contato">
+        <div class="cards-contato">
 
-                <div class="item-contato">
-                    <img src="imagens/telefone.png" width="20px">
-                    <span><b>Telefone:</b> (61) 98148-4353</span>
+            <a href="tel:+5561982576862" class="card-contato">
+                <div class="icone-contato">
+                    <img src="imagens/telefone.png" alt="Telefone">
+                </div>
+                <div class="info-contato">
+                    <h3>Telefone</h3>
+                    <span>(61) 98257-6862</span>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5561982576862" target="_blank" class="card-contato">
+                <div class="icone-contato">
+                    <img src="imagens/whats.png" alt="WhatsApp">
+                </div>
+                <div class="info-contato">
+                    <h3>WhatsApp</h3>
+                    <span>(61) 98257-6862</span>
+                </div>
+            </a>
+
+            <a href="mailto:visionmed17@gmail.com" class="card-contato">
+                <div class="icone-contato">
+                    <img src="imagens/gmail.png" alt="E-mail">
+                </div>
+                <div class="info-contato">
+                    <h3>E-mail</h3>
+                    <span>visionmed17@gmail.com</span>
+                </div>
+            </a>
+
+            <a href="https://instagram.com/visionmedbsb" target="_blank" class="card-contato">
+                <div class="icone-contato">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </div>
+                <div class="info-contato">
+                    <h3>Instagram</h3>
+                    <span>@visionmedbsb</span>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer-site">
+
+        <div class="footer-container">
+
+            <div class="footer-col footer-marca">
+                <div class="footer-logo">
+                    <img src="imagens/logo.png" alt="VisionMed Logo">
+                    <h3>VISIONMED</h3>
                 </div>
 
-                <div class="item-contato">
-                    <img src="imagens/whats.png" width="20px">
-                    <span><b>WhatsApp:</b> (61) 8257-6862</span>
-                </div>
-
-                <div class="item-contato">
-                    <img src="imagens/gmail.png" width="20px">
-                    <span><b>E-mail:</b> visionmed17@gmail.com</span>
-                </div>
-
+                <p>
+                    Cuidado especializado em saúde ocular com atendimento humanizado,
+                    tecnologia moderna e foco no bem-estar de cada paciente.
+                </p>
             </div>
 
-        </section>
+            <div class="footer-col">
+                <h4>Links Rápidos:</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#exames">Exames</a></li>
+                    <li><a href="#convenios">Convênios</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
 
-        <p>© 2026 VisionMed - Centro Oftalmológico</p>
+            <div class="footer-col">
+                <h4>Contato:</h4>
+                <ul>
+                    <li><a href="tel:+5561982576862">(61) 98257-6862</a></li>
+                    <li><a href="https://wa.me/5561982576862" target="_blank">WhatsApp</a></li>
+                    <li><a href="mailto:visionmed17@gmail.com">visionmed17@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Atendimento:</h4>
+                <ul>
+                    <li>Segunda a Sexta</li>
+                    <li>08h às 18h</li>
+                    <li>Sábado sob consulta</li>
+                    <li>Taguatinga - DF</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 VisionMed - Centro Oftalmológico. Todos os direitos reservados.</p>
+        </div>
 
     </footer>
 
+    <!-- botão flutuante de whatsapp e voltar ao topo -->
 
-    <!-- ================= SCRIPT DARK MODE ================= -->
-    <script>
+    <a href="#inicio" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">
+        ⬆
+    </a>
 
-        const botao = document.getElementById("theme-toggle");
-        const icone = document.getElementById("icone-tema");
+    <a href="https://wa.me/5561981484353" class="whatsapp-float" target="_blank">
+        <img src="imagens/whats.png" width="28px">
+    </a>
 
-        botao.addEventListener("click", () => {
-
-            document.body.classList.toggle("modo-escuro");
-
-            if (document.body.classList.contains("modo-escuro")) {
-                icone.src = "imagens/sol.png";
-            } else {
-                icone.src = "imagens/lua-crescente.png";
-            }
-
-        });
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 

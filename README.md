@@ -83,6 +83,68 @@ diretos de agendamento. Além de transmitir credibilidade, o site busca simplifi
 * Status da responsividade:
  - A responsividade está em desenvolvimento e faz parte da evolução contínua do projeto, com foco em refinamentos visuais e melhor adaptação para diferentes plataformas.
 
+* Desafios encontrados no desenvolvimento
+ - Durante a construção do site da VisionMed, alguns desafios importantes surgiram ao longo do processo. Eles foram fundamentais para o amadurecimento do projeto e para a 
+ evolução da estrutura visual e funcional da página.
+
+ 1. Construção de uma identidade visual coerente.
+   Um dos primeiros desafios foi encontrar uma estética que transmitisse, ao mesmo tempo, profissionalismo, confiança, modernidade e acolhimento, características essenciais 
+   para um site da área da saúde. Foi necessário ajustar paleta de cores, tipografia, espaçamentos, destaques visuais e estilo geral até chegar a uma apresentação mais alinhada 
+   com a proposta institucional da clínica.
+
+ 2. Organização do layout.
+   No início, algumas partes do site apresentavam uma estrutura mais simples e linear. Um dos desafios foi transformar esse conteúdo em uma interface mais agradável visualmente, 
+   evitando uma aparência que desse a sensação de “lista” e deixando a navegação mais fluida. Isso exigiu reorganização das seções, melhoria na distribuição dos elementos e 
+   criação de blocos visuais mais equilibrados.
+
+ 3. Ajustes finos de alinhamento e espaçamento.
+  Boa parte do desenvolvimento envolveu correções detalhadas de posicionamento, como:
+   • alinhamento da logo.
+   • distribuição dos elementos no header.
+   • ajuste do espaçamento entre textos, cards e seções.
+   • correção de âncoras do menu fixo.
+   • posicionamento visual de elementos no footer.
+  Esses ajustes foram importantes para dar ao site um acabamento mais profissional.
+
+ 4. Implementação do modo escuro.
+  A criação do modo escuro trouxe desafios tanto visuais quanto funcionais. Foi necessário adaptar cores, contrastes, botões, cards, footer e elementos informativos para que o 
+  site continuasse bonito e legível em ambos os temas. Além disso, também foi implementada a lógica de alternância manual de tema, persistência com localStorage e detecção do 
+  tema do sistema operacional.
+
+ 5. Comportamento visual do header e da navegação.
+  Outro desafio importante foi fazer com que o header fixo funcionasse bem junto com a navegação por seções. Isso envolveu ajustar o comportamento do menu, corrigir a posição 
+  de chegada ao clicar nos links e aplicar destaque automático no item ativo conforme a rolagem da página.
+
+ 6. Desenvolvimento do carrossel de exames.
+  A seção de exames exigiu um cuidado maior por envolver um componente interativo. Foi necessário estruturar:
+   • navegação por botões.
+   • indicadores de slide.
+   • transição automática.
+   • pausa ao interagir
+   • suporte a toque em dispositivos móveis
+  Esse foi um dos pontos mais importantes para deixar o site mais dinâmico e menos estático.
+
+ 7. Responsividade para dispositivos móveis.
+  Como o projeto começou com foco visual em tela maior, um dos desafios posteriores foi adaptar toda a estrutura para mobile. Isso incluiu revisar proporções, reorganizar grids,
+  redimensionar fontes, ajustar botões, melhorar o uso do carrossel em telas touch e repensar o comportamento do layout em diferentes larguras de tela.
+
+ 8. Equilíbrio entre estética e funcionalidade.
+  Ao longo do projeto, foi necessário tomar várias decisões para equilibrar beleza visual e usabilidade. Em muitos momentos, elementos que pareciam interessantes visualmente 
+  precisaram ser refinados para não comprometer a leitura, a organização do conteúdo ou a navegação do usuário.
+
+ 9. Evolução contínua do projeto.
+  Outro desafio foi justamente o processo de evolução constante. O site passou por diversas melhorias incrementais, com revisões frequentes em detalhes visuais, animações, seções
+  institucionais, footer, contatos e comportamento responsivo. Esse processo foi importante para transformar uma base inicial em uma interface mais sólida e profissional.
+ 
+- Cada desafio enfrentado contribuiu para melhorar o projeto em aspectos técnicos, visuais e estruturais. Mais do que apenas construir uma página, o desenvolvimento do site 
+  da VisionMed serviu como prática real de:
+   • organização de interface.
+   • refinamento visual.
+   • experiência do usuário.
+   • responsividade.
+   • manipulação com JavaScript.
+   • construção de um projeto institucional mais completo.
+
 * Possíveis Melhorias Futuras:
  - Criação de um formulário de agendamento interno.
  - Painel administrativo para gerenciamento de exames e convênios.

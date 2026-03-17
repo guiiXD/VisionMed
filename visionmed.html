@@ -8,9 +8,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="imagens/icone.png">
-    <title>VisionMed - Centro Oftalmológico</title>
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <title>VisionMed - Centro Oftalmológico</title>
+
+    <meta name="description"
+        content="Clínica oftalmológica em Brasília. Consultas, exames e atendimento especializado em saúde da visão.">
+
+    <meta name="keywords" content="oftalmologista, clínica oftalmológica, exames de vista, visão, Brasília">
+
+    <meta name="author" content="VisionMed">
+
+    <meta property="og:title" content="VisionMed Centro Oftalmológico">
+    <meta property="og:description" content="Cuidado especializado com a sua visão.">
+    <meta property="og:image" content="URL_DA_IMAGEM">
+    <meta property="og:type" content="website">
 
 </head>
 
@@ -22,7 +34,7 @@
         <!-- Logo da clínica -->
         <div class="logo-container">
 
-            <img src="imagens/logo.png" alt="VisionMed Logo" class="logo-site">
+            <img src="imagens/logo.png" alt="Logo da clínica visionmed" class="logo-site">
             <h1 class="titulo-clinica">VISIONMED</h1>
 
         </div>
@@ -30,8 +42,13 @@
         <!-- Área do menu -->
         <div class="menu-container">
 
-            <!-- Menu de navegação -->
-            <nav class="menu-navegacao">
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu-navegacao" id="menu-navegacao">
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre</a>
                 <a href="#exames">Exames</a>
@@ -39,11 +56,6 @@
                 <a href="#localizacao">Localização</a>
                 <a href="#contato">Contato</a>
             </nav>
-
-            <!-- Botão de troca de tema -->
-            <button id="theme-toggle" class="botao-tema">
-                <img src="imagens/lua-crescente.png" alt="Modo escuro" id="icone-tema">
-            </button>
 
         </div>
 
@@ -61,13 +73,13 @@
 
         <p class="horario-banner">
             Horário de atendimento:
-            <strong>segunda a sexta, das 9h às 18h</strong>
+            <strong>Segunda a Sexta, das 09h às 18h</strong>
             e
-            <strong>sábado, das 9h às 12h</strong>
+            <strong>Sábado, das 09h às 12h</strong>
         </p>
 
-        <a href="https://wa.me/556182576862?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
-            class="botao-banner">
+        <a href="https://wa.me/5561982576862?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+            rel="noopener noreferrer" class="botao-banner">
             Agendar Consulta
         </a>
     </section>
@@ -76,25 +88,25 @@
     <section id="sobre" class="secao-site sobre-clinica">
 
         <div class="sobre-texto">
-            <span class="sobre-tag">Cuidado, Confiança, Experiencia</span>
+            <span class="sobre-tag">Cuidado, confiança, experiência</span>
             <h2>Sobre a Clínica:</h2>
 
             <p>
                 A VisionMed é uma clínica especializada em oftalmologia dedicada ao cuidado completo da saúde ocular.
                 Com mais de 20 anos de experiência, unimos atendimento humanizado, tecnologia moderna e diagnóstico
-                preciso
-                para oferecer mais segurança e tranquilidade aos nossos pacientes.
+                preciso para oferecer mais segurança e tranquilidade aos nossos pacientes.
             </p>
 
             <p>
                 Nosso compromisso é proporcionar um atendimento acolhedor, com atenção em cada detalhe, explicações
-                claras
-                e acompanhamento individual. Mais do que realizar exames, buscamos orientar e cuidar de cada paciente
+                claras e acompanhamento individual. Mais do que realizar exames, buscamos orientar e cuidar de cada
+                paciente
                 de forma próxima e responsável.
             </p>
 
             <p>
-                Contamos com estrutura preparada para a realização de diversos exames oftalmológicos, contribuindo para
+                Contamos com uma estrutura preparada para a realização de diversos exames oftalmológicos, contribuindo
+                para
                 prevenção, diagnóstico e acompanhamento da saúde visual com qualidade e confiança.
             </p>
         </div>
@@ -123,7 +135,7 @@
     <section id="exames" class="secao-site secao-exames">
 
         <div class="titulo-secao">
-            <span class="sobre-tag">Tecnologia e Precisão</span>
+            <span class="sobre-tag">Tecnologia e precisão</span>
             <h2>Exames Realizados:</h2>
             <p>
                 Conheça alguns dos principais exames realizados na clínica para avaliação, prevenção e
@@ -140,7 +152,7 @@
 
                     <div class="slide-exame ativo">
                         <div class="slide-imagem">
-                            <img src="imagens/topografia.png" alt="Topografia de Córnea">
+                            <img src="imagens/topografia.png" alt="Exame de Topografia de Córnea">
                         </div>
 
                         <div class="slide-conteudo">
@@ -154,7 +166,7 @@
 
                     <div class="slide-exame">
                         <div class="slide-imagem">
-                            <img src="imagens/campo-visual.png" alt="Campo Visual">
+                            <img src="imagens/campo-visual.jpg" alt="Exame de Campo Visual">
                         </div>
 
                         <div class="slide-conteudo">
@@ -168,7 +180,7 @@
 
                     <div class="slide-exame">
                         <div class="slide-imagem">
-                            <img src="imagens/mapeamento-retina.png" alt="Mapeamento de Retina">
+                            <img src="imagens/mapeamento-retina.png" alt="Exame de Mapeamento de Retina">
                         </div>
 
                         <div class="slide-conteudo">
@@ -201,8 +213,8 @@
     <section id="convenios" class="secao-site secao-convenios">
 
         <div class="convenios-topo">
-            <span class="sobre-tag">Facilidade no Atendimento</span>
-            <h2>Convênios e Atendimento</h2>
+            <span class="sobre-tag">Facilidade no atendimento</span>
+            <h2>Convênios e Atendimento:</h2>
             <p>
                 A VisionMed busca oferecer mais praticidade no cuidado com a sua saúde ocular.
                 Atendemos pacientes particulares e trabalhamos com convênios selecionados.
@@ -257,7 +269,8 @@
                     <p>
                         Fale com nossa equipe para confirmar cobertura, orientações e formas de atendimento.
                     </p>
-                    <a href="https://wa.me/5561982576862" target="_blank" class="botao-convenios">
+                    <a href="https://wa.me/5561982576862" target="_blank" class="botao-convenios"
+                        rel="noopener noreferrer">
                         Consultar pelo WhatsApp
                     </a>
                 </div>
@@ -273,7 +286,7 @@
         <div class="localizacao-conteudo">
 
             <div class="localizacao-info">
-                <span class="sobre-tag">Onde Estamos</span>
+                <span class="sobre-tag">Onde estamos</span>
                 <h2>Localização:</h2>
 
                 <p>
@@ -283,13 +296,13 @@
 
                 <div class="card-endereco">
                     <h3>VisionMed - Centro Oftalmológico</h3>
-                    <p>CSB 02 lote 1/4 - Alameda shopping - torre A - Salas 301/303</p>
+                    <p>CSB 02, Lote 1/4, Alameda Shopping, Torre A, Salas 301 e 303</p>
                     <p>CEP: 72015-000</p>
                     <p>Taguatinga - DF</p>
                 </div>
 
                 <a href="https://www.google.com/maps/place/Vision+Med%2FDra.Sissi+Rodrigues/data=!4m2!3m1!1s0x0:0xce0585265fe185e2?sa=X&ved=1t:2428&ictx=111"
-                    target="_blank" class="botao-localizacao">
+                    target="_blank" class="botao-localizacao" rel="noopener noreferrer">
                     Ver no Google Maps
                 </a>
             </div>
@@ -307,60 +320,86 @@
 
 
     <!-- ================= CONTATOS ================= -->
-    <section id="contato" class="secao-contato">
+    <section id="contato" class="secao-site secao-contato">
 
-        <span class="sobre-tag">Fale Conosco</span>
+        <div class="contato-wrapper">
 
-        <h2>Contatos:</h2>
-        <p class="texto-contato">
-            Fale com a VisionMed e agende seu atendimento com mais praticidade.
-        </p>
+            <div class="contato-apresentacao">
+                <span class="sobre-tag">Fale conosco</span>
+                <h2>Contatos:</h2>
 
-        <div class="cards-contato">
+                <p class="texto-contato">
+                    Nossa equipe está pronta para orientar você sobre consultas, exames,
+                    convênios e horários de atendimento com praticidade e atenção.
+                </p>
 
-            <a href="tel:+5561982576862" class="card-contato">
-                <div class="icone-contato">
-                    <img src="imagens/telefone.png" alt="Telefone">
-                </div>
-                <div class="info-contato">
-                    <h3>Telefone</h3>
-                    <span>(61) 98257-6862</span>
-                </div>
-            </a>
+                <div class="contato-destaques">
+                    <div class="destaque-contato-info">
+                        <strong>Atendimento humanizado</strong>
+                        <span>Suporte com atenção em cada etapa do seu atendimento.</span>
+                    </div>
 
-            <a href="https://wa.me/5561982576862" target="_blank" class="card-contato">
-                <div class="icone-contato">
-                    <img src="imagens/whats.png" alt="WhatsApp">
+                    <div class="destaque-contato-info">
+                        <strong>Agendamento facilitado</strong>
+                        <span>Fale com a clínica pelos canais mais práticos para você.</span>
+                    </div>
                 </div>
-                <div class="info-contato">
-                    <h3>WhatsApp</h3>
-                    <span>(61) 98257-6862</span>
-                </div>
-            </a>
+            </div>
 
-            <a href="mailto:visionmed17@gmail.com" class="card-contato">
-                <div class="icone-contato">
-                    <img src="imagens/gmail.png" alt="E-mail">
-                </div>
-                <div class="info-contato">
-                    <h3>E-mail</h3>
-                    <span>visionmed17@gmail.com</span>
-                </div>
-            </a>
+            <div class="contato-cards-area">
 
-            <a href="https://instagram.com/visionmedbsb" target="_blank" class="card-contato">
-                <div class="icone-contato">
-                    <img src="imagens/instagram.png" alt="Instagram">
+                <a href="https://wa.me/5561982576862" target="_blank" class="card-contato card-contato-principal"
+                    rel="noopener noreferrer">
+                    <div class="icone-contato">
+                        <img src="imagens/whats.png" alt="Ícone do WhatsApp">
+                    </div>
+                    <div class="info-contato">
+                        <h3>WhatsApp</h3>
+                        <span>(61) 98257-6862</span>
+                        <p>Agende sua consulta rapidamente</p>
+                    </div>
+                </a>
+
+                <div class="cards-contato-secundarios">
+
+                    <a href="tel:+5561982576862" class="card-contato">
+                        <div class="icone-contato">
+                            <img src="imagens/telefone.png" alt="Ícone de Telefone">
+                        </div>
+                        <div class="info-contato">
+                            <h3>Telefone</h3>
+                            <span>(61) 98257-6862</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:visionmed17@gmail.com" class="card-contato card-email">
+                        <div class="icone-contato">
+                            <img src="imagens/gmail.png" alt="Ícone do G-mail">
+                        </div>
+                        <div class="info-contato">
+                            <h3>E-mail</h3>
+                            <span>visionmed17@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://instagram.com/visionmedbsb" target="_blank" rel="noopener noreferrer"
+                        class="card-contato">
+                        <div class="icone-contato">
+                            <img src="imagens/instagram.png" alt="Ícone do Instagram">
+                        </div>
+                        <div class="info-contato">
+                            <h3>Instagram</h3>
+                            <span>@visionmedbsb</span>
+                        </div>
+                    </a>
+
                 </div>
-                <div class="info-contato">
-                    <h3>Instagram</h3>
-                    <span>@visionmedbsb</span>
-                </div>
-            </a>
+
+            </div>
+
         </div>
 
     </section>
-
     <!-- ================= FOOTER ================= -->
 
     <footer class="footer-site">
@@ -369,7 +408,7 @@
 
             <div class="footer-col footer-marca">
                 <div class="footer-logo">
-                    <img src="imagens/logo.png" alt="VisionMed Logo">
+                    <img src="imagens/logo.png" alt="Logo da clínica visionmed">
                     <h3>VISIONMED</h3>
                 </div>
 
@@ -380,7 +419,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Links Rápidos:</h4>
+                <h4>Links rápidos:</h4>
                 <ul>
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
@@ -395,7 +434,8 @@
                 <h4>Contato:</h4>
                 <ul>
                     <li><a href="tel:+5561982576862">(61) 98257-6862</a></li>
-                    <li><a href="https://wa.me/5561982576862" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://wa.me/5561982576862" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    </li>
                     <li><a href="mailto:visionmed17@gmail.com">visionmed17@gmail.com</a></li>
                 </ul>
             </div>
@@ -403,9 +443,10 @@
             <div class="footer-col">
                 <h4>Atendimento:</h4>
                 <ul>
-                    <li>Segunda a Sexta</li>
-                    <li>08h às 18h</li>
-                    <li>Sábado sob consulta</li>
+                    <li>Segunda a Sexta:</li>
+                    <li>09h às 18h</li>
+                    <li>Sábado:</li>
+                    <li>09h às 12h</li>
                     <li>Taguatinga - DF</li>
                 </ul>
             </div>
@@ -424,7 +465,7 @@
         ⬆
     </a>
 
-    <a href="https://wa.me/5561981484353" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5561982576862" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src="imagens/whats.png" width="28px">
     </a>
 

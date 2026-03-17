@@ -10,13 +10,28 @@ diretos de agendamento. Além de transmitir credibilidade, o site busca simplifi
  - Visual limpo e institucional.
  - Paleta de cores alinhada à identidade da clínica.
  - Navegação simples e intuitiva.
- - Suporte a tema claro e escuro (Light/Dark Mode).
+ - Adaptação automática ao tema do sistema operacional.
  - Integração com WhatsApp e Google Maps.
+ - Layout responsivo completo para todos os dispositivos.
+ - Interface refinada com foco em experiência do usuário (UX).
+ - Seção de contato em estilo premium com destaque para conversão.
+
+* Acessibilidade:
+ - O site foi completamente desenvolvido com máxima atenção à acessibilidade e usabilidade, buscando oferecer uma experiência inclusiva para diferentes perfis de usuários.
+ - Foram aplicadas boas práticas como:
+  • Uso de HTML semântico.
+  • Textos descritivos em imagens.
+  • Navegação simples e intuitiva.
+  • Elementos com bom tamanho para interação tanto no desktop quanto em dispositivos móveis.
+  • Estrutura compatível com leitores de tela.
+- Essas práticas contribuíram para tornar o site mais acessível, especialmente considerando o contexto da área da sáude visual.
+
+  
 
 * Tecnologias Utilizadas:
  - HTML5: Estruturação semântica do conteúdo.
  - CSS3: Estilização, animações de scroll e gerenciamento de temas.
- - JavaScript: Manipulação de DOM, persistência de tema via localStorage e lógica de navegação.
+ - JavaScript: Manipulação de DOM, detecção automática de preferências do sistema e lógica de navegação.
  - APIs: Google Maps Embed e WhatsApp API.
  - Tipografia: Google Fonts.
 
@@ -61,7 +76,7 @@ diretos de agendamento. Além de transmitir credibilidade, o site busca simplifi
  - Para desenvolvimento, recomenda-se o uso da extensão Live Server no Visual Studio Code para atualização automática do navegador.
 
 * Responsividade:
- - O site da VisionMed está em processo de adaptação para diferentes tamanhos de tela, com foco em oferecer uma navegação confortável e organizada também em dispositivos móveis.
+ - O site da VisionMed está completa e implementada para diferentes tamanhos de tela, com foco em oferecer uma navegação confortável e organizada também em dispositivos móveis.
  - A estrutura responsiva está sendo desenvolvida para garantir boa visualização em:
     • smartphones
     • tablets
@@ -108,8 +123,7 @@ diretos de agendamento. Além de transmitir credibilidade, o site busca simplifi
 
  4. Implementação do modo escuro.
   A criação do modo escuro trouxe desafios tanto visuais quanto funcionais. Foi necessário adaptar cores, contrastes, botões, cards, footer e elementos informativos para que o 
-  site continuasse bonito e legível em ambos os temas. Além disso, também foi implementada a lógica de alternância manual de tema, persistência com localStorage e detecção do 
-  tema do sistema operacional.
+  site continuasse harmonioso e legível em ambos os temas. Além disso, também foi implementada a lógica de adaptação automática ao tema do sistema opeacional.
 
  5. Comportamento visual do header e da navegação.
   Outro desafio importante foi fazer com que o header fixo funcionasse bem junto com a navegação por seções. Isso envolveu ajustar o comportamento do menu, corrigir a posição 

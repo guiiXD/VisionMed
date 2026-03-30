@@ -87,6 +87,11 @@ iframe {
     width: 100%;
 
     z-index: 1000;
+    transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.topo-site.header-escondida {
+    transform: translateY(-100%);
 }
 
 .logo-container {
@@ -222,7 +227,7 @@ iframe {
 .banner-principal {
     background:
         linear-gradient(rgba(4, 10, 22, 0.50), rgba(4, 10, 22, 0.50)),
-        url("imagens/banner_olho.jpg");
+        url("imagens/banner_olho.webp");
 
     background-size: cover;
     background-position: center;
@@ -316,7 +321,7 @@ iframe {
     align-items: center;
     justify-content: center;
 
-    margin-top: 0;
+    margin-top: 18px;
     padding: 17px 38px;
 
     font-family: 'Montserrat', sans-serif;
@@ -555,35 +560,136 @@ button:hover {
     top: 50%;
     transform: translateY(-50%);
 
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: none;
+    width: 60px;
+    height: 60px;
+    padding: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 28px;
-    line-height: 1;
-
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
     cursor: pointer;
     z-index: 2;
 
-    background: #E86A00;
     color: white;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+        rgba(232, 106, 0, 0.88);
 
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    padding: 0;
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.18),
+        0 4px 12px rgba(232, 106, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+    transition:
+        transform 0.32s ease,
+        box-shadow 0.32s ease,
+        background 0.32s ease,
+        border-color 0.32s ease,
+        opacity 0.32s ease;
+}
+
+.carrossel-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.22), transparent 58%);
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.carrossel-btn::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.32s ease, transform 0.32s ease;
+    pointer-events: none;
+}
+
+.carrossel-btn svg {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.32s ease, filter 0.32s ease;
+}
+
+.carrossel-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+    border-color: rgba(255, 255, 255, 0.34);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.05)),
+        rgba(255, 122, 38, 0.94);
+
+    box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.24),
+        0 8px 18px rgba(232, 106, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.carrossel-btn:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.carrossel-btn.prev:hover svg {
+    transform: translateX(-2px);
+}
+
+.carrossel-btn.next:hover svg {
+    transform: translateX(2px);
+}
+
+.carrossel-btn:active {
+    transform: translateY(-50%) scale(0.98);
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.18),
+        0 4px 10px rgba(232, 106, 0, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .carrossel-btn.prev {
-    left: -10px;
+    left: -14px;
 }
 
 .carrossel-btn.next {
-    right: -10px;
+    right: -14px;
+}
+
+.modo-escuro .carrossel-btn {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03)),
+        rgba(255, 140, 66, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.34),
+        0 4px 12px rgba(255, 140, 66, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.modo-escuro .carrossel-btn:hover {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+        rgba(255, 140, 66, 0.94);
+
+    border-color: rgba(255, 255, 255, 0.24);
+
+    box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.42),
+        0 8px 18px rgba(255, 140, 66, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .indicadores-exames {
@@ -1108,8 +1214,27 @@ button:hover {
         0 4px 14px rgba(255, 140, 66, 0.08);
 }
 
+.modo-escuro .card-contato-principal {
+    background: linear-gradient(135deg, #E86A00 0%, #ff8a1d 100%);
+    border: none;
+    box-shadow:
+        0 18px 40px rgba(232, 106, 0, 0.28),
+        0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+.modo-escuro .card-contato-principal:hover {
+    box-shadow:
+        0 24px 46px rgba(232, 106, 0, 0.34),
+        0 10px 24px rgba(0, 0, 0, 0.18);
+    filter: brightness(1.03);
+}
+
 .modo-escuro .icone-contato {
     background: linear-gradient(135deg, rgba(232, 106, 0, 0.16), rgba(255, 255, 255, 0.05));
+}
+
+.modo-escuro .card-contato-principal .icone-contato {
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .modo-escuro .info-contato h3 {
@@ -1122,6 +1247,12 @@ button:hover {
 
 .modo-escuro .info-contato p {
     color: rgba(255, 255, 255, 0.72);
+}
+
+.modo-escuro .card-contato-principal .info-contato h3,
+.modo-escuro .card-contato-principal .info-contato span,
+.modo-escuro .card-contato-principal .info-contato p {
+    color: white;
 }
 
 /* ================= RESPONSIVIDADE CONTATO ================= */
@@ -1373,44 +1504,141 @@ button:hover {
 
 .voltar-topo {
     position: fixed;
-    right: 30px;
-    bottom: 110px;
+    right: 26px;
+    bottom: 108px;
 
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: #E86A00;
-    color: white;
     text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+    color: white;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05)),
+        rgba(232, 106, 0, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.20),
+        0 4px 12px rgba(232, 106, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(12px);
+    transform: translateY(14px) scale(0.94);
 
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    transition:
+        opacity 0.32s ease,
+        visibility 0.32s ease,
+        transform 0.32s ease,
+        box-shadow 0.32s ease,
+        background 0.32s ease,
+        border-color 0.32s ease;
+
     z-index: 998;
 }
 
+.voltar-topo::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.32s ease, transform 0.32s ease;
+    pointer-events: none;
+}
+
+.voltar-topo svg {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.32s ease;
+}
+
 .voltar-topo:hover {
-    background: #ff7a26;
     transform: translateY(0) scale(1.08);
+    border-color: rgba(255, 255, 255, 0.28);
+
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.06)),
+        rgba(255, 122, 38, 0.96);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.24),
+        0 8px 18px rgba(232, 106, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.voltar-topo:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.voltar-topo:hover svg {
+    transform: translateY(-2px);
+}
+
+.voltar-topo:active {
+    transform: translateY(0) scale(0.98);
 }
 
 .voltar-topo.mostrar {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
+.modo-escuro .voltar-topo {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03)),
+        rgba(255, 140, 66, 0.84);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.34),
+        0 4px 12px rgba(255, 140, 66, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.modo-escuro .voltar-topo:hover {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+        rgba(255, 140, 66, 0.94);
+
+    border-color: rgba(255, 255, 255, 0.22);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.42),
+        0 8px 18px rgba(255, 140, 66, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 768px) {
+    .voltar-topo {
+        right: 18px;
+        bottom: 92px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .voltar-topo svg {
+        width: 20px;
+        height: 20px;
+    }
+}
 
 /* ================= ANIMAÇÕES ================= */
 
@@ -1916,11 +2144,17 @@ button:hover {
 
 @media (max-width: 768px) {
     .topo-site {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 14px 14px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 16px;
+    }
+
+    .logo-container {
+        justify-content: flex-start;
+        text-align: left;
+        flex-wrap: nowrap;
+        gap: 10px;
     }
 
     .logo-site {
@@ -1977,7 +2211,7 @@ button:hover {
 
     .botao-banner {
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
         font-size: 17px;
         padding: 15px 20px;
     }
@@ -2289,23 +2523,35 @@ button:hover {
 
 @media (max-width: 480px) {
     .topo-site {
-        padding: 12px 10px;
-        gap: 14px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 16px;
     }
 
     .logo-container {
-        flex-direction: column;
-        gap: 8px;
+        justify-content: flex-start;
+        text-align: left;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .logo-site {
+        height: 44px;
     }
 
     .titulo-clinica {
-        margin-left: 0;
         font-size: 22px;
-        text-align: center;
+        margin-left: 0;
+        text-align: left;
     }
 
-    .banner-principal {
-        padding: 210px 14px 60px;
+    .menu-container {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
     }
 
     .banner-principal h2 {
@@ -2385,4 +2631,381 @@ button:hover {
 
 #exames {
     scroll-margin-top: 57px;
+}
+
+/* ============== RETIRAR BTN CARROSSEL CELULAR ============== */
+
+@media (max-width: 768px) {
+    .carrossel-btn {
+        display: none;
+    }
+}
+
+/* ============== AJUSTES NA RESPONSIVIDADE ================== */
+
+@media (max-width: 480px) {
+    .banner-principal {
+        padding: 135px 14px 60px;
+        background-size: 155%;
+        background-position: center 20%;
+    }
+}
+
+/* teste */
+
+
+/* CORREÇÃO COR WHATSAPP */
+
+.modo-escuro .card-contato.card-contato-principal {
+    background: linear-gradient(135deg, #E86A00 0%, #ff8a1d 100%) !important;
+    border: none !important;
+    box-shadow:
+        0 18px 40px rgba(232, 106, 0, 0.28),
+        0 6px 18px rgba(0, 0, 0, 0.14) !important;
+}
+
+.modo-escuro .card-contato.card-contato-principal:hover {
+    box-shadow:
+        0 24px 46px rgba(232, 106, 0, 0.34),
+        0 10px 24px rgba(0, 0, 0, 0.18) !important;
+    filter: brightness(1.03);
+}
+
+.modo-escuro .card-contato.card-contato-principal .icone-contato {
+    background: rgba(255, 255, 255, 0.16) !important;
+}
+
+.modo-escuro .card-contato.card-contato-principal .info-contato h3,
+.modo-escuro .card-contato.card-contato-principal .info-contato span,
+.modo-escuro .card-contato.card-contato-principal .info-contato p {
+    color: white !important;
+}
+
+/* correção CONVENIOS */
+
+.acoes-convenios {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.botao-ver-convenios {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: none;
+    background: #E86A00;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.botao-ver-convenios:hover {
+    transform: translateY(-3px);
+    background: #ff7a26;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+}
+
+.lista-convenios-completa {
+    margin-top: 28px;
+}
+
+.lista-convenios-box {
+    background: #ffffff;
+    border: 1px solid rgba(232, 106, 0, 0.12);
+    border-radius: 24px;
+    padding: 28px 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.lista-convenios-box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #E86A00;
+    text-align: center;
+}
+
+.lista-convenios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.lista-convenios li {
+    background: rgba(232, 106, 0, 0.06);
+    border: 1px solid rgba(232, 106, 0, 0.10);
+    border-radius: 16px;
+    padding: 14px 16px;
+    text-align: center;
+    font-weight: 600;
+    color: #2f2f2f;
+}
+
+.card-consulta-convenio {
+    margin-top: 28px;
+}
+
+.modo-escuro .botao-ver-convenios {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    color: white;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.modo-escuro .botao-ver-convenios:hover {
+    background: rgba(255, 140, 66, 0.16);
+}
+
+.modo-escuro .lista-convenios-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.modo-escuro .lista-convenios-box h3 {
+    color: #ff8c42;
+}
+
+.modo-escuro .lista-convenios li {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 992px) {
+    .lista-convenios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .lista-convenios {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-convenios-box {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .lista-convenios-box h3 {
+        font-size: 21px;
+    }
+
+    .botao-ver-convenios {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+.convenio-card-logo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 26px 22px;
+    min-height: 250px;
+}
+
+.convenio-logo-box {
+    width: 100%;
+    max-width: 220px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    border: 1px solid rgba(232, 106, 0, 0.10);
+    border-radius: 18px;
+
+    padding: 16px;
+    margin-bottom: 20px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.convenio-logo {
+    max-width: 100%;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: contrast(1.06) saturate(1.02);
+}
+
+.convenio-info-centralizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.convenio-info-centralizado h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #E86A00;
+}
+
+.convenio-info-centralizado p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #444;
+    max-width: 240px;
+}
+
+.convenio-logo-box {
+    background: linear-gradient(180deg, #ffffff 0%, #fffaf6 100%);
+}
+
+.modo-escuro .convenio-logo-box {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bloco-consulta-convenio {
+    margin: 34px auto 0;
+    max-width: 860px;
+    text-align: center;
+
+    padding: 38px 28px;
+    border-radius: 28px;
+
+    background:
+        linear-gradient(135deg, rgba(232, 106, 0, 1) 0%, rgba(255, 140, 66, 1) 100%);
+    color: white;
+
+    box-shadow:
+        0 20px 45px rgba(232, 106, 0, 0.22),
+        0 10px 24px rgba(0, 0, 0, 0.10);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.bloco-consulta-convenio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.20), transparent 35%);
+    pointer-events: none;
+}
+
+.consulta-convenio-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.bloco-consulta-convenio h3 {
+    margin: 0 0 14px;
+    font-size: 32px;
+    line-height: 1.2;
+    color: white;
+}
+
+.bloco-consulta-convenio p {
+    max-width: 620px;
+    margin: 0 auto 24px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.botao-consulta-premium {
+    background: white;
+    color: #E86A00;
+    min-width: 240px;
+    padding: 15px 26px;
+    font-size: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+}
+
+.botao-consulta-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+}
+
+.modo-escuro .bloco-consulta-convenio {
+    background:
+        linear-gradient(135deg, #E86A00 0%, #ff8c42 100%);
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.34),
+        0 10px 24px rgba(232, 106, 0, 0.18);
+}
+
+@media (max-width: 768px) {
+    .convenio-card-logo {
+        min-height: 220px;
+        padding: 22px 18px;
+    }
+
+    .convenio-logo-box {
+        height: 88px;
+        max-width: 100%;
+        padding: 14px;
+        margin-bottom: 16px;
+    }
+
+    .convenio-logo {
+        max-height: 56px;
+    }
+
+    .bloco-consulta-convenio {
+        padding: 28px 18px;
+        border-radius: 22px;
+    }
+
+    .bloco-consulta-convenio h3 {
+        font-size: 26px;
+    }
+
+    .bloco-consulta-convenio p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .botao-consulta-premium {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+.logo-caixa {
+    max-height: 200px;
+    margin-top: -10px;
+}
+
+.logo-casembrapa {
+    max-height: 130px;
+}
+
+.logo-prosaude {
+    max-height: 200px;
 }

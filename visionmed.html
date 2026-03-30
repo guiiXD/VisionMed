@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="imagens/icone.png">
+    <link rel="icon" type="image/webp" href="imagens/icone.webp">
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <title>VisionMed - Centro Oftalmológico</title>
@@ -21,7 +21,6 @@
 
     <meta property="og:title" content="VisionMed Centro Oftalmológico">
     <meta property="og:description" content="Cuidado especializado com a sua visão.">
-    <meta property="og:image" content="URL_DA_IMAGEM">
     <meta property="og:type" content="website">
 
 </head>
@@ -34,7 +33,7 @@
         <!-- Logo da clínica -->
         <div class="logo-container">
 
-            <img src="imagens/logo.png" alt="Logo da clínica visionmed" class="logo-site">
+            <img src="imagens/logo.webp" alt="Logo da clínica visionmed" class="logo-site">
             <h1 class="titulo-clinica">VISIONMED</h1>
 
         </div>
@@ -61,345 +60,451 @@
 
     </header>
 
+    <main>
 
-    <!-- ================= BANNER PRINCIPAL ================= -->
-    <section id="inicio" class="banner-principal">
-        <h2>VISIONMED</h2>
-        <h2>Centro Oftalmológico</h2>
-
-        <p>
-            Somos especialistas em cuidado e saúde da visão com tecnologia moderna.
-        </p>
-
-        <p class="horario-banner">
-            Horário de atendimento:
-            <strong>Segunda a Sexta, das 09h às 18h</strong>
-            e
-            <strong>Sábado, das 09h às 12h</strong>
-        </p>
-
-        <a href="https://wa.me/5561982576862?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
-            rel="noopener noreferrer" class="botao-banner">
-            Agendar Consulta
-        </a>
-    </section>
-
-    <!-- ================= SOBRE A CLÍNICA ================= -->
-    <section id="sobre" class="secao-site sobre-clinica">
-
-        <div class="sobre-texto">
-            <span class="sobre-tag">Cuidado, confiança, experiência</span>
-            <h2>Sobre a Clínica:</h2>
+        <!-- ================= BANNER PRINCIPAL ================= -->
+        <section id="inicio" class="banner-principal">
+            <h2>VISIONMED</h2>
+            <h2>Centro Oftalmológico</h2>
 
             <p>
-                A VisionMed é uma clínica especializada em oftalmologia dedicada ao cuidado completo da saúde ocular.
-                Com mais de 20 anos de experiência, unimos atendimento humanizado, tecnologia moderna e diagnóstico
-                preciso para oferecer mais segurança e tranquilidade aos nossos pacientes.
+                Somos especialistas em cuidado e saúde da visão com tecnologia moderna.
             </p>
 
-            <p>
-                Nosso compromisso é proporcionar um atendimento acolhedor, com atenção em cada detalhe, explicações
-                claras e acompanhamento individual. Mais do que realizar exames, buscamos orientar e cuidar de cada
-                paciente
-                de forma próxima e responsável.
+            <p class="horario-banner">
+                Horário de atendimento:
+                <strong>Segunda a Sexta, das 09h às 18h</strong>
+                e
+                <strong>Sábado, das 09h às 12h</strong>
             </p>
 
-            <p>
-                Contamos com uma estrutura preparada para a realização de diversos exames oftalmológicos, contribuindo
-                para
-                prevenção, diagnóstico e acompanhamento da saúde visual com qualidade e confiança.
-            </p>
-        </div>
+            <a href="https://wa.me/5561982576862?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" target="_blank"
+                rel="noopener noreferrer" class="botao-banner">
+                Agendar Consulta
+            </a>
+        </section>
 
-        <div class="sobre-destaques">
-            <div class="card-destaque">
-                <h3>Atendimento Humanizado</h3>
-                <p>Cuidado próximo, acolhedor e com atenção individual em cada consulta.</p>
-            </div>
+        <!-- ================= SOBRE A CLÍNICA ================= -->
+        <section id="sobre" class="secao-site sobre-clinica">
 
-            <div class="card-destaque">
-                <h3>Tecnologia Moderna</h3>
-                <p>Equipamentos atualizados para exames oftalmológicos com mais precisão.</p>
-            </div>
-
-            <div class="card-destaque">
-                <h3>Experiência e Confiança</h3>
-                <p>Mais de 20 anos dedicados à saúde ocular e ao bem-estar dos pacientes.</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- ================== EXAMES REALIZADOS AQUI ======================== -->
-
-    <section id="exames" class="secao-site secao-exames">
-
-        <div class="titulo-secao">
-            <span class="sobre-tag">Tecnologia e precisão</span>
-            <h2>Exames Realizados:</h2>
-            <p>
-                Conheça alguns dos principais exames realizados na clínica para avaliação, prevenção e
-                acompanhamento da saúde ocular.
-            </p>
-        </div>
-
-        <div class="carrossel-exames">
-
-            <button class="carrossel-btn prev" onclick="mudarSlide(-1)">‹</button>
-
-            <div class="carrossel-viewport">
-                <div class="carrossel-track">
-
-                    <div class="slide-exame ativo">
-                        <div class="slide-imagem">
-                            <img src="imagens/topografia.png" alt="Exame de Topografia de Córnea">
-                        </div>
-
-                        <div class="slide-conteudo">
-                            <h3>Topografia de Córnea</h3>
-                            <p>
-                                Exame que avalia a curvatura da córnea, auxiliando no diagnóstico de alterações
-                                corneanas e no acompanhamento de diversas condições visuais.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="slide-exame">
-                        <div class="slide-imagem">
-                            <img src="imagens/campo-visual.jpg" alt="Exame de Campo Visual">
-                        </div>
-
-                        <div class="slide-conteudo">
-                            <h3>Campo Visual</h3>
-                            <p>
-                                Exame utilizado para analisar a visão periférica e identificar possíveis alterações
-                                relacionadas a doenças oculares e neurológicas.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="slide-exame">
-                        <div class="slide-imagem">
-                            <img src="imagens/mapeamento-retina.png" alt="Exame de Mapeamento de Retina">
-                        </div>
-
-                        <div class="slide-conteudo">
-                            <h3>Mapeamento de Retina</h3>
-                            <p>
-                                Permite uma avaliação detalhada do fundo do olho, contribuindo para a prevenção,
-                                diagnóstico e acompanhamento de alterações na retina.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <button class="carrossel-btn next" onclick="mudarSlide(1)">›</button>
-
-        </div>
-
-        <div class="indicadores-exames">
-            <span class="indicador ativo" onclick="irParaSlide(0)"></span>
-            <span class="indicador" onclick="irParaSlide(1)"></span>
-            <span class="indicador" onclick="irParaSlide(2)"></span>
-        </div>
-
-    </section>
-
-    <!-- ==================== CONVÊNIOS ================================-->
-
-    <section id="convenios" class="secao-site secao-convenios">
-
-        <div class="convenios-topo">
-            <span class="sobre-tag">Facilidade no atendimento</span>
-            <h2>Convênios e Atendimento:</h2>
-            <p>
-                A VisionMed busca oferecer mais praticidade no cuidado com a sua saúde ocular.
-                Atendemos pacientes particulares e trabalhamos com convênios selecionados.
-                Entre em contato para confirmar cobertura, elegibilidade e condições de atendimento.
-            </p>
-        </div>
-
-        <div class="convenios-grid">
-
-            <div class="convenio-card">
-                <div class="convenio-icone">S</div>
-                <div class="convenio-info">
-                    <h3>Saúde Caixa</h3>
-                    <p>Consulte a cobertura e as condições de atendimento no momento do agendamento.</p>
-                </div>
-            </div>
-
-            <div class="convenio-card">
-                <div class="convenio-icone">G</div>
-                <div class="convenio-info">
-                    <h3>GDF Saúde</h3>
-                    <p>Verifique com nossa equipe a elegibilidade e os detalhes do seu atendimento.</p>
-                </div>
-            </div>
-
-            <div class="convenio-card">
-                <div class="convenio-icone">C</div>
-                <div class="convenio-info">
-                    <h3>Casembrapa</h3>
-                    <p>Entre em contato para confirmar cobertura, autorização e disponibilidade.</p>
-                </div>
-            </div>
-
-            <div class="convenio-card">
-                <div class="convenio-icone">F</div>
-                <div class="convenio-info">
-                    <h3>Fascal</h3>
-                    <p>Confirme com antecedência as condições de atendimento e cobertura do convênio.</p>
-                </div>
-            </div>
-            <div class="convenio-card destaque-particular">
-                <div class="convenio-icone">+</div>
-                <div class="convenio-info">
-                    <h3>Atendimento Particular</h3>
-                    <p>Opção disponível com agendamento prático e atendimento especializado.</p>
-                </div>
-            </div>
-
-            <div class="convenio-card destaque-contato">
-                <div class="convenio-info">
-                    <h3>Não encontrou seu convênio?</h3>
-                    <p>
-                        Fale com nossa equipe para confirmar cobertura, orientações e formas de atendimento.
-                    </p>
-                    <a href="https://wa.me/5561982576862" target="_blank" class="botao-convenios"
-                        rel="noopener noreferrer">
-                        Consultar pelo WhatsApp
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= LOCALIZAÇÃO ================= -->
-    <section id="localizacao" class="secao-site secao-localizacao">
-
-        <div class="localizacao-conteudo">
-
-            <div class="localizacao-info">
-                <span class="sobre-tag">Onde estamos</span>
-                <h2>Localização:</h2>
+            <div class="sobre-texto">
+                <span class="sobre-tag">Cuidado, confiança, experiência</span>
+                <h2>Sobre a Clínica</h2>
 
                 <p>
-                    Estamos em uma localização de fácil acesso para oferecer mais praticidade
-                    no seu atendimento.
+                    A VisionMed é uma clínica especializada em oftalmologia dedicada ao cuidado completo da saúde
+                    ocular.
+                    Com mais de 20 anos de experiência, unimos atendimento humanizado, tecnologia moderna e diagnóstico
+                    preciso para oferecer mais segurança e tranquilidade aos nossos pacientes.
                 </p>
 
-                <div class="card-endereco">
-                    <h3>VisionMed - Centro Oftalmológico</h3>
-                    <p>CSB 02, Lote 1/4, Alameda Shopping, Torre A, Salas 301 e 303</p>
-                    <p>CEP: 72015-000</p>
-                    <p>Taguatinga - DF</p>
+                <p>
+                    Nosso compromisso é proporcionar um atendimento acolhedor, com atenção em cada detalhe, explicações
+                    claras e acompanhamento individual. Mais do que realizar exames, buscamos orientar e cuidar de cada
+                    paciente
+                    de forma próxima e responsável.
+                </p>
+
+                <p>
+                    Contamos com uma estrutura preparada para a realização de diversos exames oftalmológicos,
+                    contribuindo
+                    para
+                    prevenção, diagnóstico e acompanhamento da saúde visual com qualidade e confiança.
+                </p>
+            </div>
+
+            <div class="sobre-destaques">
+                <div class="card-destaque">
+                    <h3>Atendimento Humanizado</h3>
+                    <p>Cuidado próximo, acolhedor e com atenção individual em cada consulta.</p>
                 </div>
 
-                <a href="https://www.google.com/maps/place/Vision+Med%2FDra.Sissi+Rodrigues/data=!4m2!3m1!1s0x0:0xce0585265fe185e2?sa=X&ved=1t:2428&ictx=111"
-                    target="_blank" class="botao-localizacao" rel="noopener noreferrer">
-                    Ver no Google Maps
+                <div class="card-destaque">
+                    <h3>Tecnologia Moderna</h3>
+                    <p>Equipamentos atualizados para exames oftalmológicos com mais precisão.</p>
+                </div>
+
+                <div class="card-destaque">
+                    <h3>Experiência e Confiança</h3>
+                    <p>Mais de 20 anos dedicados à saúde ocular e ao bem-estar dos pacientes.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================== EXAMES REALIZADOS AQUI ======================== -->
+
+        <section id="exames" class="secao-site secao-exames">
+
+            <div class="titulo-secao">
+                <span class="sobre-tag">Tecnologia e precisão</span>
+                <h2>Exames Realizados</h2>
+                <p>
+                    Conheça alguns dos principais exames realizados na clínica para avaliação, prevenção e
+                    acompanhamento da saúde ocular.
+                </p>
+            </div>
+
+            <div class="carrossel-exames">
+
+                <button class="carrossel-btn prev" onclick="mudarSlide(-1)" aria-label="Slide anterior">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15 6L9 12L15 18" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+
+                <button class="carrossel-btn next" onclick="mudarSlide(1)" aria-label="Próximo slide">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 6L15 12L9 18" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+
+                <div class="carrossel-viewport">
+                    <div class="carrossel-track">
+
+                        <div class="slide-exame ativo">
+                            <div class="slide-imagem">
+                                <img src="imagens/topografia.webp" alt="Exame de Topografia de Córnea" loading="lazy">
+                            </div>
+
+                            <div class="slide-conteudo">
+                                <h3>Topografia de Córnea</h3>
+                                <p>
+                                    Exame que avalia a curvatura da córnea, auxiliando no diagnóstico de alterações
+                                    corneanas e no acompanhamento de diversas condições visuais.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-exame">
+                            <div class="slide-imagem">
+                                <img src="imagens/campo-visual.webp" alt="Exame de Campo Visual" loading="lazy">
+                            </div>
+
+                            <div class="slide-conteudo">
+                                <h3>Campo Visual</h3>
+                                <p>
+                                    Exame utilizado para analisar a visão periférica e identificar possíveis alterações
+                                    relacionadas a doenças oculares e neurológicas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-exame">
+                            <div class="slide-imagem">
+                                <img src="imagens/mapeamento-retina.webp" alt="Exame de Mapeamento de Retina"
+                                    loading="lazy">
+                            </div>
+
+                            <div class="slide-conteudo">
+                                <h3>Mapeamento de Retina</h3>
+                                <p>
+                                    Permite uma avaliação detalhada do fundo do olho, contribuindo para a prevenção,
+                                    diagnóstico e acompanhamento de alterações na retina.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="indicadores-exames">
+                <span class="indicador ativo" onclick="irParaSlide(0)"></span>
+                <span class="indicador" onclick="irParaSlide(1)"></span>
+                <span class="indicador" onclick="irParaSlide(2)"></span>
+            </div>
+
+        </section>
+
+        <!-- ==================== CONVÊNIOS ================================-->
+
+        <section id="convenios" class="secao-site secao-convenios">
+
+            <div class="convenios-topo">
+                <span class="sobre-tag">Facilidade no atendimento</span>
+                <h2>Convênios e Atendimento</h2>
+                <p>
+                    Atendemos convênios selecionados e pacientes particulares.
+                    Confira alguns dos principais convênios aceitos pela clínica e,
+                    caso o seu não esteja listado, consulte nossa equipe.
+                </p>
+            </div>
+
+            <div class="convenios-grid convenios-principais">
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/CAIXA.webp" alt="Logo do convênio Saúde Caixa"
+                            class="convenio-logo logo-caixa" loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>Saúde Caixa</h3>
+                        <p>Consulte cobertura e condições no momento do agendamento.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/GDF-sAÚDE.webp" alt="Logo do convênio GDF Saúde"
+                            class="convenio-logo" loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>GDF Saúde</h3>
+                        <p>Verifique a elegibilidade e os detalhes do atendimento.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/Bacen.webp" alt="Logo do convênio Bacen" class="convenio-logo"
+                            loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>Bacen</h3>
+                        <p>Entre em contato para confirmar cobertura e autorização.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/casembrapa.webp" alt="Logo do convênio Casembrapa"
+                            class="convenio-logo logo-casembrapa" loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>Casembrapa</h3>
+                        <p>Consulte disponibilidade e orientações de atendimento.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/PRO-SAUDE-TJDFT.webp" alt="Logo do convênio Pró-Saúde TJDFT"
+                            class="convenio-logo logo-prosaude" loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>Pró-Saúde TJDFT</h3>
+                        <p>Confirme com antecedência cobertura e elegibilidade.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/fascal.webp" alt="Logo do convênio Fascal" class="convenio-logo"
+                            loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>Fascal</h3>
+                        <p>Consulte cobertura e condições para o seu atendimento.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/planassiste.webp" alt="Logo do convênio Plan-Assiste MPU"
+                            class="convenio-logo" loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>Plan-Assiste MPU</h3>
+                        <p>Verifique com nossa equipe os detalhes da cobertura.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/trtsaúde.webp" alt="Logo do convênio TRT Saúde"
+                            class="convenio-logo" loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>TRT Saúde</h3>
+                        <p>Consulte disponibilidade e condições de atendimento.</p>
+                    </div>
+                </div>
+
+                <div class="convenio-card convenio-card-logo">
+                    <div class="convenio-logo-box">
+                        <img src="imagens/convenios/lifeempresarial.webp" alt="Logo do convênio lifeempresarial"
+                            class="convenio-logo" loading="lazy">
+                    </div>
+                    <div class="convenio-info convenio-info-centralizado">
+                        <h3>Life Empresarial</h3>
+                        <p>Consulte disponibilidade e condições de atendimento.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="acoes-convenios">
+                <button class="botao-ver-convenios" id="botao-ver-convenios" type="button" aria-expanded="false"
+                    aria-controls="lista-convenios-completa">
+                    Ver todos os convênios
+                </button>
+            </div>
+
+            <div class="lista-convenios-completa" id="lista-convenios-completa" hidden>
+                <div class="lista-convenios-box">
+                    <h3>Todos os convênios atendidos</h3>
+                    <ul class="lista-convenios">
+                        <li>Bacen</li>
+                        <li>Casembrapa</li>
+                        <li>Fascal</li>
+                        <li>GDF Saúde</li>
+                        <li>Life Empresarial</li>
+                        <li>Plan-Assiste MPU</li>
+                        <li>Plas/JMU (STM)</li>
+                        <li>Pró-Saúde (Câmara dos Deputados)</li>
+                        <li>Pró-Saúde TJDFT</li>
+                        <li>Pró-Social (TRF)</li>
+                        <li>Real Grandeza</li>
+                        <li>Saúde Caixa</li>
+                        <li>Saúde Petrobras</li>
+                        <li>Serpro</li>
+                        <li>SIS Senado</li>
+                        <li>TRE Saúde</li>
+                        <li>TRT Saúde</li>
+                        <li>TST Saúde</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bloco-consulta-convenio">
+                <span class="consulta-convenio-tag">Atendimento facilitado</span>
+                <h3>Não encontrou seu convênio?</h3>
+                <p>
+                    Nossa equipe pode verificar a cobertura, orientar sobre elegibilidade
+                    e informar as melhores formas de atendimento para você.
+                </p>
+                <a href="https://wa.me/5561982576862" target="_blank" rel="noopener noreferrer"
+                    class="botao-convenios botao-consulta-premium">
+                    Consultar pelo WhatsApp
                 </a>
             </div>
 
-            <div class="localizacao-mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3968792910764!2d-48.0566459!3d-15.835724699999998!2m3!1f0!
+        </section>
+
+        <!-- ================= LOCALIZAÇÃO ================= -->
+        <section id="localizacao" class="secao-site secao-localizacao">
+
+            <div class="localizacao-conteudo">
+
+                <div class="localizacao-info">
+                    <span class="sobre-tag">Onde estamos</span>
+                    <h2>Localização</h2>
+
+                    <p>
+                        Estamos em uma localização de fácil acesso para oferecer mais praticidade
+                        no seu atendimento.
+                    </p>
+
+                    <div class="card-endereco">
+                        <h3>VisionMed - Centro Oftalmológico</h3>
+                        <p>CSB 02, Lote 1/4, Alameda Shopping, Torre A, Salas 301 e 303</p>
+                        <p>CEP: 72015-525</p>
+                        <p>Taguatinga - DF</p>
+                    </div>
+
+                    <a href="https://www.google.com/maps/place/Vision+Med%2FDra.Sissi+Rodrigues/data=!4m2!3m1!1s0x0:0xce0585265fe185e2?sa=X&ved=1t:2428&ictx=111"
+                        target="_blank" class="botao-localizacao" rel="noopener noreferrer">
+                        Ver no Google Maps
+                    </a>
+                </div>
+
+                <div class="localizacao-mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3968792910764!2d-48.0566459!3d-15.835724699999998!2m3!1f0!
                     2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a337d52534c71%3A0xce0585265fe185e2!2sVision%20Med%2FDra.Sissi%20Rodrigues!5
-                    e0!3m2!1spt-BR!2sbr!4v1773165484737!5m2!1spt-BR!2sbr">
-                </iframe>
+                    e0!3m2!1spt-BR!2sbr!4v1773165484737!5m2!1spt-BR!2sbr" loading="lazy">
+                    </iframe>
+                </div>
+
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= CONTATOS ================= -->
-    <section id="contato" class="secao-site secao-contato">
+        <!-- ================= CONTATOS ================= -->
+        <section id="contato" class="secao-site secao-contato">
 
-        <div class="contato-wrapper">
+            <div class="contato-wrapper">
 
-            <div class="contato-apresentacao">
-                <span class="sobre-tag">Fale conosco</span>
-                <h2>Contatos:</h2>
+                <div class="contato-apresentacao">
+                    <span class="sobre-tag">Fale conosco</span>
+                    <h2>Contatos</h2>
 
-                <p class="texto-contato">
-                    Nossa equipe está pronta para orientar você sobre consultas, exames,
-                    convênios e horários de atendimento com praticidade e atenção.
-                </p>
+                    <p class="texto-contato">
+                        Nossa equipe está pronta para orientar você sobre consultas, exames,
+                        convênios e horários de atendimento com praticidade e atenção.
+                    </p>
 
-                <div class="contato-destaques">
-                    <div class="destaque-contato-info">
-                        <strong>Atendimento humanizado</strong>
-                        <span>Suporte com atenção em cada etapa do seu atendimento.</span>
-                    </div>
+                    <div class="contato-destaques">
+                        <div class="destaque-contato-info">
+                            <strong>Atendimento humanizado</strong>
+                            <span>Suporte com atenção em cada etapa do seu atendimento.</span>
+                        </div>
 
-                    <div class="destaque-contato-info">
-                        <strong>Agendamento facilitado</strong>
-                        <span>Fale com a clínica pelos canais mais práticos para você.</span>
+                        <div class="destaque-contato-info">
+                            <strong>Agendamento facilitado</strong>
+                            <span>Fale com a clínica pelos canais mais práticos para você.</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="contato-cards-area">
+                <div class="contato-cards-area">
 
-                <a href="https://wa.me/5561982576862" target="_blank" class="card-contato card-contato-principal"
-                    rel="noopener noreferrer">
-                    <div class="icone-contato">
-                        <img src="imagens/whats.png" alt="Ícone do WhatsApp">
-                    </div>
-                    <div class="info-contato">
-                        <h3>WhatsApp</h3>
-                        <span>(61) 98257-6862</span>
-                        <p>Agende sua consulta rapidamente</p>
-                    </div>
-                </a>
-
-                <div class="cards-contato-secundarios">
-
-                    <a href="tel:+5561982576862" class="card-contato">
+                    <a href="https://wa.me/5561982576862" target="_blank" class="card-contato card-contato-principal"
+                        rel="noopener noreferrer">
                         <div class="icone-contato">
-                            <img src="imagens/telefone.png" alt="Ícone de Telefone">
+                            <img src="imagens/whats.webp" alt="Ícone do WhatsApp">
                         </div>
                         <div class="info-contato">
-                            <h3>Telefone</h3>
+                            <h3>WhatsApp</h3>
                             <span>(61) 98257-6862</span>
+                            <p>Agende sua consulta rapidamente</p>
                         </div>
                     </a>
 
-                    <a href="mailto:visionmed17@gmail.com" class="card-contato card-email">
-                        <div class="icone-contato">
-                            <img src="imagens/gmail.png" alt="Ícone do G-mail">
-                        </div>
-                        <div class="info-contato">
-                            <h3>E-mail</h3>
-                            <span>visionmed17@gmail.com</span>
-                        </div>
-                    </a>
+                    <div class="cards-contato-secundarios">
 
-                    <a href="https://instagram.com/visionmedbsb" target="_blank" rel="noopener noreferrer"
-                        class="card-contato">
-                        <div class="icone-contato">
-                            <img src="imagens/instagram.png" alt="Ícone do Instagram">
-                        </div>
-                        <div class="info-contato">
-                            <h3>Instagram</h3>
-                            <span>@visionmedbsb</span>
-                        </div>
-                    </a>
+                        <a href="tel:+556133523032" class="card-contato">
+                            <div class="icone-contato">
+                                <img src="imagens/telefone.webp" alt="Ícone de Telefone">
+                            </div>
+                            <div class="info-contato">
+                                <h3>Telefone</h3>
+                                <span>(61) 3352-3032</span>
+                            </div>
+                        </a>
+
+                        <a href="mailto:visionmed17@gmail.com" class="card-contato card-email">
+                            <div class="icone-contato">
+                                <img src="imagens/gmail.webp" alt="Ícone do G-mail">
+                            </div>
+                            <div class="info-contato">
+                                <h3>E-mail</h3>
+                                <span>visionmed17@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://instagram.com/visionmedbsb" target="_blank" rel="noopener noreferrer"
+                            class="card-contato">
+                            <div class="icone-contato">
+                                <img src="imagens/instagram.webp" alt="Ícone do Instagram">
+                            </div>
+                            <div class="info-contato">
+                                <h3>Instagram</h3>
+                                <span>@visionmedbsb</span>
+                            </div>
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
     <!-- ================= FOOTER ================= -->
 
     <footer class="footer-site">
@@ -408,7 +513,7 @@
 
             <div class="footer-col footer-marca">
                 <div class="footer-logo">
-                    <img src="imagens/logo.png" alt="Logo da clínica visionmed">
+                    <img src="imagens/logo.webp" alt="Logo da clínica visionmed">
                     <h3>VISIONMED</h3>
                 </div>
 
@@ -431,7 +536,7 @@
             </div>
 
             <div class="footer-col">
-                <h4>Contato:</h4>
+                <h4>Contato</h4>
                 <ul>
                     <li><a href="tel:+5561982576862">(61) 98257-6862</a></li>
                     <li><a href="https://wa.me/5561982576862" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -454,7 +559,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 VisionMed - Centro Oftalmológico. Todos os direitos reservados.</p>
+            <p>© <span id="ano-atual"></span> VisionMed - Centro Oftalmológico. Todos os direitos reservados.</p>
         </div>
 
     </footer>
@@ -462,11 +567,14 @@
     <!-- botão flutuante de whatsapp e voltar ao topo -->
 
     <a href="#inicio" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">
-        ⬆
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 19V5M12 5L6 11M12 5L18 11" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
     </a>
 
     <a href="https://wa.me/5561982576862" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <img src="imagens/whats.png" width="28px">
+        <img src="imagens/whats.webp" width="28px">
     </a>
 
     <script src="script.js"></script>

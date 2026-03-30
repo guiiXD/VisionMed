@@ -1,175 +1,210 @@
-VisionMed - Centro Oftalmológico
- Site institucional desenvolvido para a VisionMed, focado em oferecer uma experiência moderna, profissional e acessível. O projeto prioriza a navegabilidade e a 
- identidade visual forte, utilizando tecnologias fundamentais do desenvolvimento front-end.
+## VisionMed – Centro Oftalmológico
 
-* Sobre o Projeto:
- - A proposta do site é estabelecer a presença digital da clínica, facilitando o acesso de pacientes a informações cruciais como exames realizados, convênios aceitos e canais 
-diretos de agendamento. Além de transmitir credibilidade, o site busca simplificar a jornada do usuário até o contato final.
+Landing page institucional desenvolvida para a VisionMed, com foco em experiência do usuário (UX), identidade visual profissional e acessibilidade.
+O projeto prioriza navegação intuitiva, comunicação clara e facilitação do contato entre paciente e clínica.
 
-* Diferenciais do Site:
- - Visual limpo e institucional.
- - Paleta de cores alinhada à identidade da clínica.
- - Navegação simples e intuitiva.
- - Adaptação automática ao tema do sistema operacional.
- - Integração com WhatsApp e Google Maps.
- - Layout responsivo completo para todos os dispositivos.
- - Interface refinada com foco em experiência do usuário (UX).
- - Seção de contato em estilo premium com destaque para conversão.
+Construído com HTML, CSS e JavaScript puro, o site incorpora recursos modernos como dark mode automático, carrossel interativo customizado e layout totalmente responsivo.
 
-* Acessibilidade:
- - O site foi completamente desenvolvido com máxima atenção à acessibilidade e usabilidade, buscando oferecer uma experiência inclusiva para diferentes perfis de usuários.
- - Foram aplicadas boas práticas como:
-  • Uso de HTML semântico.
-  • Textos descritivos em imagens.
-  • Navegação simples e intuitiva.
-  • Elementos com bom tamanho para interação tanto no desktop quanto em dispositivos móveis.
-  • Estrutura compatível com leitores de tela.
-- Essas práticas contribuíram para tornar o site mais acessível, especialmente considerando o contexto da área da sáude visual.
+<h2 align="center">📸 Preview do Projeto</h2>
 
-  
+<h3>🌞 Modo Claro</h3>
 
-* Tecnologias Utilizadas:
- - HTML5: Estruturação semântica do conteúdo.
- - CSS3: Estilização, animações de scroll e gerenciamento de temas.
- - JavaScript: Manipulação de DOM, detecção automática de preferências do sistema e lógica de navegação.
- - APIs: Google Maps Embed e WhatsApp API.
- - Tipografia: Google Fonts.
+<p align="center">
+  <img src="imagens/banner.png" width="800" alt="Banner modo claro">
+</p>
 
-* Funcionalidades:
- - Navegação Dinâmica: Header com scroll suave e destaque automático do item ativo no menu.
- - Gerenciamento de Tema: Alternância manual entre modo claro e escuro, com detecção automática das preferências do sistema.
- - Componentes Interativos: Carrossel de exames, botão flutuante de WhatsApp e botão de retorno ao topo.
- - Conteúdo Informativo: Seção institucional, área de convênios e mapa de localização integrado.
- - Feedback Visual: Animações suaves nas seções durante a rolagem da página.
+<p align="center">
+  <img src="imagens/carrossel.png" width="800" alt="Carrossel modo claro">
+</p>
 
-* Estrutura do Projeto:
- Plaintext
- VisionMed/
- ├── visionmed.html   # Documento principal
- ├── home.css         # Estilização e variáveis de cores
- ├── script.js        # Lógica de interações e comportamento
- └── imagens/         # Assets visuais
-    ├── banner_olho.png
-    ├── logo.png
-    ├── icone.png
-    └── ... (arquivos de mídia auxiliares)
+<p align="center">
+  <img src="imagens/convenios.png" width="800" alt="Convênios modo claro">
+</p>
 
-* Seções do Site:
- - Início: Banner principal com mensagem de apresentação e botão para agendamento.
- - Sobre: Apresentação institucional destacando tecnologia, atendimento humanizado e experiência na área.
- - Exames: Catálogo dos principais procedimentos com descrições resumidas dentro de um carrossel.
- - Convênios: Lista de planos atendidos e orientações de cobertura.
- - Localização: Endereço físico com mapa integrado para facilitar o acesso.
- - Contato: Canais diretos via telefone, e-mail e redes sociais.
- - Footer: Rodapé com resumo institucional e links rápidos.
+---
 
-* Identidade Visual:
- - O design foi fundamentado em uma paleta de cores que comunica os valores da clínica:
-  • Azul Marinho: Transmite confiança, seriedade e estabilidade.
-  •Laranja: Utilizado para chamadas para ação (CTA) e destaques.
-  •Tons Neutros: Garantem leveza visual e alta legibilidade.
+<h3>🌙 Modo Escuro</h3>
 
-* Como Executar o Projeto:
- - Como este é um projeto front-end estático, não há necessidade de instalação de dependências:
- - Faça o download ou clone o repositório.
- - Abra o arquivo visionmed.html em qualquer navegador moderno.
- - Para desenvolvimento, recomenda-se o uso da extensão Live Server no Visual Studio Code para atualização automática do navegador.
+<p align="center">
+  <img src="imagens/bannerdark.png" width="800" alt="Banner modo escuro">
+</p>
 
-* Responsividade:
- - O site da VisionMed está completa e implementada para diferentes tamanhos de tela, com foco em oferecer uma navegação confortável e organizada também em dispositivos móveis.
- - A estrutura responsiva está sendo desenvolvida para garantir boa visualização em:
-    • smartphones
-    • tablets
-    • notebooks
-    • desktops
+<p align="center">
+  <img src="imagens/carrosseldark.png" width="800" alt="Carrossel modo escuro">
+</p>
 
- - Foram planejados e aplicados ajustes para que os elementos do site se reorganizem de forma mais adequada em telas menores, incluindo:
-   • reorganização do header e do menu de navegação
-   • redimensionamento de textos, botões e espaçamentos
-   • adaptação das seções institucionais
-   • ajuste do carrossel de exames para uso em telas touch
-   • reorganização dos cards de convênios e contato
-   • adequação do footer para dispositivos móveis
-   •reposicionamento dos botões flutuantes
+<p align="center">
+  <img src="imagens/conveniosdark.png" width="800" alt="Convênios modo escuro">
+</p>
 
- - Além disso, o carrossel de exames também recebeu suporte para interação por toque, permitindo que o usuário deslize os slides com o dedo em dispositivos mobile, melhorando a 
- experiência de uso.
+## 📌 Sobre o Projeto
 
-* Status da responsividade:
- - A responsividade está em desenvolvimento e faz parte da evolução contínua do projeto, com foco em refinamentos visuais e melhor adaptação para diferentes plataformas.
+* A proposta do site é estabelecer a presença digital da clínica, facilitando o acesso de pacientes a informações essenciais como exames realizados, convênios aceitos e canais diretos de agendamento.
 
-* Desafios encontrados no desenvolvimento
- - Durante a construção do site da VisionMed, alguns desafios importantes surgiram ao longo do processo. Eles foram fundamentais para o amadurecimento do projeto e para a 
- evolução da estrutura visual e funcional da página.
+* Além de transmitir credibilidade, o projeto busca simplificar a jornada do usuário até o contato final, com foco em clareza, organização e experiência.
 
- 1. Construção de uma identidade visual coerente.
-   Um dos primeiros desafios foi encontrar uma estética que transmitisse, ao mesmo tempo, profissionalismo, confiança, modernidade e acolhimento, características essenciais 
-   para um site da área da saúde. Foi necessário ajustar paleta de cores, tipografia, espaçamentos, destaques visuais e estilo geral até chegar a uma apresentação mais alinhada 
-   com a proposta institucional da clínica.
+## 🚀 Diferenciais do Projeto
 
- 2. Organização do layout.
-   No início, algumas partes do site apresentavam uma estrutura mais simples e linear. Um dos desafios foi transformar esse conteúdo em uma interface mais agradável visualmente, 
-   evitando uma aparência que desse a sensação de “lista” e deixando a navegação mais fluida. Isso exigiu reorganização das seções, melhoria na distribuição dos elementos e 
-   criação de blocos visuais mais equilibrados.
+- Visual limpo e institucional
+- Paleta de cores alinhada à identidade da clínica
+- Navegação simples e intuitiva
+- Adaptação automática ao tema do sistema operacional
+- Integração com WhatsApp e Google Maps
+- Layout responsivo completo
+- Interface refinada com foco em experiência do usuário (UX)
+- Seção de contato em estilo premium com foco em conversão
 
- 3. Ajustes finos de alinhamento e espaçamento.
-  Boa parte do desenvolvimento envolveu correções detalhadas de posicionamento, como:
-   • alinhamento da logo.
-   • distribuição dos elementos no header.
-   • ajuste do espaçamento entre textos, cards e seções.
-   • correção de âncoras do menu fixo.
-   • posicionamento visual de elementos no footer.
-  Esses ajustes foram importantes para dar ao site um acabamento mais profissional.
+## ⚙️ Destaques Técnicos
 
- 4. Implementação do modo escuro.
-  A criação do modo escuro trouxe desafios tanto visuais quanto funcionais. Foi necessário adaptar cores, contrastes, botões, cards, footer e elementos informativos para que o 
-  site continuasse harmonioso e legível em ambos os temas. Além disso, também foi implementada a lógica de adaptação automática ao tema do sistema opeacional.
+- Carrossel infinito customizado com suporte a swipe (touch + mouse)
+- Detecção automática de tema via prefers-color-scheme
+- Header inteligente com comportamento dinâmico no scroll
+- Destaque automático do item ativo no menu conforme a seção visível
+- Estrutura baseada em HTML semântico e boas práticas de acessibilidade
+- Microinterações e animações suaves para melhor experiência visual
 
- 5. Comportamento visual do header e da navegação.
-  Outro desafio importante foi fazer com que o header fixo funcionasse bem junto com a navegação por seções. Isso envolveu ajustar o comportamento do menu, corrigir a posição 
-  de chegada ao clicar nos links e aplicar destaque automático no item ativo conforme a rolagem da página.
+## ♿ Acessibilidade
 
- 6. Desenvolvimento do carrossel de exames.
-  A seção de exames exigiu um cuidado maior por envolver um componente interativo. Foi necessário estruturar:
-   • navegação por botões.
-   • indicadores de slide.
-   • transição automática.
-   • pausa ao interagir
-   • suporte a toque em dispositivos móveis
-  Esse foi um dos pontos mais importantes para deixar o site mais dinâmico e menos estático.
+* O site foi desenvolvido com atenção à acessibilidade e usabilidade, buscando oferecer uma experiência inclusiva para diferentes perfis de usuários, especialmente    considerando o contexto da saúde visual.
 
- 7. Responsividade para dispositivos móveis.
-  Como o projeto começou com foco visual em tela maior, um dos desafios posteriores foi adaptar toda a estrutura para mobile. Isso incluiu revisar proporções, reorganizar grids,
-  redimensionar fontes, ajustar botões, melhorar o uso do carrossel em telas touch e repensar o comportamento do layout em diferentes larguras de tela.
+* Boas práticas aplicadas:
+*Uso de HTML semântico*
+*Textos alternativos em imagens*
+*Navegação clara e previsível*
+*Elementos com bom tamanho para interação (desktop e mobile)*
+*Estrutura compatível com leitores de tela*
 
- 8. Equilíbrio entre estética e funcionalidade.
-  Ao longo do projeto, foi necessário tomar várias decisões para equilibrar beleza visual e usabilidade. Em muitos momentos, elementos que pareciam interessantes visualmente 
-  precisaram ser refinados para não comprometer a leitura, a organização do conteúdo ou a navegação do usuário.
+## 🛠 Tecnologias Utilizadas
+- *HTML5* → Estrutura semântica e acessível
+- *CSS3* → Layout responsivo, animações e design system customizado
+- *JavaScript (Vanilla)* → Manipulação de DOM e lógica de interação
+- *Google Maps Embed API* → Integração de localização
+- *WhatsApp API* → Canal direto de conversão
+- *Google Fonts* → Tipografia moderna (Montserrat)
 
- 9. Evolução contínua do projeto.
-  Outro desafio foi justamente o processo de evolução constante. O site passou por diversas melhorias incrementais, com revisões frequentes em detalhes visuais, animações, seções
-  institucionais, footer, contatos e comportamento responsivo. Esse processo foi importante para transformar uma base inicial em uma interface mais sólida e profissional.
- 
-- Cada desafio enfrentado contribuiu para melhorar o projeto em aspectos técnicos, visuais e estruturais. Mais do que apenas construir uma página, o desenvolvimento do site 
-  da VisionMed serviu como prática real de:
-   • organização de interface.
-   • refinamento visual.
-   • experiência do usuário.
-   • responsividade.
-   • manipulação com JavaScript.
-   • construção de um projeto institucional mais completo.
+## ⚡ Funcionalidades
 
-* Possíveis Melhorias Futuras:
- - Criação de um formulário de agendamento interno.
- - Painel administrativo para gerenciamento de exames e convênios.
- - Otimização de SEO (Search Engine Optimization).
- - Galeria de fotos da estrutura física da clínica.
+- Navegação dinâmica com scroll suave
+- Destaque automático do item ativo no menu
+- Alternância automática de tema (claro/escuro)
+- Carrossel interativo com suporte a toque
+- Botão flutuante de WhatsApp
+- Botão de retorno ao topo
+- Animações de entrada nas seções
+- Integração com mapa e redes sociais
 
-* Status do Projeto:
- -Em desenvolvimento. O projeto possui uma base sólida e funcional, estando aberto a refatorações e novas funcionalidades.
+## 📂 Estrutura do Projeto
 
-* Autor:
- - Guilherme Pinheiro Rodrigues de Souza
+VisionMed/
+├── visionmed.html   *Documento principal*
+├── home.css         *Estilização e design system*
+├── script.js        *Lógica de interações*
+└── imagens/         *Assets visuais*
 
-* Licença
- - Este projeto foi desenvolvido para fins de estudo, prática de desenvolvimento web e uso institucional da clínica VisionMed. Todos os direitos reservados ao autor.
+## 🧩 Seções do Site
+
+- Início → Banner principal com CTA para agendamento
+- Sobre → Apresentação institucional da clínica
+- Exames → Carrossel com principais procedimentos
+- Convênios → Planos atendidos e orientações
+- Localização → Endereço com mapa integrado
+- Contato → Canais diretos com destaque para WhatsApp
+- Footer → Informações institucionais e navegação rápida
+
+## 🎨 Identidade Visual
+
+* O design foi baseado em uma paleta que transmite confiança e modernidade:
+
+- *Azul Marinho* → Seriedade e estabilidade
+- *Laranja* → Destaque para ações e conversão
+- *Tons neutros* → Leveza e legibilidade
+
+## ▶️ Como Executar o Projeto
+
+* Este é um projeto front-end estático, não sendo necessário instalar dependências:
+
+- Faça o download ou clone o repositório
+- Abra o arquivo visionmed.html em qualquer navegador
+
+⚠️ O uso deste código é restrito e não é permitido para reutilização, modificação ou distribuição sem autorização do autor.
+
+## 📱 Responsividade
+
+* O site foi desenvolvido com abordagem responsiva desde a base, garantindo adaptação consistente entre:
+
+*smartphones*
+*tablets*
+*notebooks*
+*desktops*
+
+* Foram aplicados ajustes como:
+
+- reorganização do header e menu
+- redimensionamento de textos e botões
+- adaptação do carrossel para touch
+- reorganização de grids e cards
+- adequação do footer
+- reposicionamento de elementos interativos
+
+* A responsividade continua sendo refinada como parte da evolução contínua do projeto.
+
+## 🧠 Desafios no Desenvolvimento
+
+* Durante a construção do projeto, alguns desafios contribuíram diretamente para sua evolução:
+
+1. Identidade visual coerente
+- Definir uma estética que transmitisse profissionalismo, confiança e acolhimento.
+
+2. Organização do layout
+- Transformar uma estrutura linear em uma interface mais fluida e equilibrada.
+
+3. Ajustes finos de UI
+- Alinhamento de elementos, espaçamentos, header, footer e navegação.
+
+4. Implementação do modo escuro
+- Adaptação completa de cores, contraste e legibilidade.
+
+5. Navegação e comportamento do header
+- Correção de âncoras e destaque dinâmico no menu.
+
+6. Carrossel interativo
+- Desenvolvimento de lógica com:
+ *navegação*
+ *indicadores*
+ *autoplay*
+ *suporte a swipe*
+
+7. Responsividade
+- Adaptação completa da interface para dispositivos móveis.
+
+8. Equilíbrio entre estética e funcionalidade
+- Ajustes constantes para manter usabilidade sem perder qualidade visual.
+
+9. Evolução contínua
+- Refinamentos progressivos em layout, animações e experiência.
+
+## 🔮 Possíveis Melhorias Futuras
+
+- Formulário de agendamento interno
+- Painel administrativo
+- Otimização de SEO
+- Galeria da clínica
+- Integração com backend
+
+## 📌 Status do Projeto
+
+ Em desenvolvimento. 
+ O projeto possui base sólida e funcional, com melhorias contínuas planejadas.
+
+## 👨‍💻 Autor
+
+*Guilherme Pinheiro Rodrigues de Souza*
+
+## 📄 Licença
+
+* Este projeto é de propriedade exclusiva do autor.
+* Todos os direitos estão reservados. 
+
+*Não é permitido copiar, modificar, distribuir ou utilizar este código, total ou parcialmente, sem autorização prévia.*
+
+* Este repositório tem finalidade exclusivamente demonstrativa (portfólio).

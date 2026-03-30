@@ -17,42 +17,114 @@ window.addEventListener("scroll", () => {
 });
 
 
-// CARROSSEL
+// CARROSSEL INFINITO COM SWIPE TIPO STORIES
 
 const track = document.querySelector(".carrossel-track");
-const slides = document.querySelectorAll(".slide-exame");
-const indicadores = document.querySelectorAll(".indicador");
 const carrossel = document.querySelector(".carrossel-exames");
+const indicadores = document.querySelectorAll(".indicador");
 
-let slideAtual = 0;
-let intervaloCarrossel;
+let slidesOriginais = [];
+let totalSlides = 0;
+let slideAtual = 1; // começa no primeiro slide real
+let intervaloCarrossel = null;
 
-function atualizarCarrossel() {
-    if (!track || slides.length === 0 || indicadores.length === 0) return;
+let larguraSlide = 0;
+let estaArrastando = false;
+let estaAnimando = false;
 
-    track.style.transform = `translateX(-${slideAtual * 100}%)`;
+let startX = 0;
+let currentX = 0;
+let startTranslate = 0;
+let currentTranslate = 0;
 
-    indicadores.forEach(ind => ind.classList.remove("ativo"));
-    indicadores[slideAtual].classList.add("ativo");
+function atualizarLarguraSlide() {
+    if (!track) return;
+    larguraSlide = carrossel.querySelector(".carrossel-viewport").offsetWidth;
+}
+
+function atualizarIndicadores() {
+    if (!indicadores.length || totalSlides === 0) return;
+
+    let indiceReal = slideAtual - 1;
+
+    if (slideAtual === 0) {
+        indiceReal = totalSlides - 1;
+    } else if (slideAtual === totalSlides + 1) {
+        indiceReal = 0;
+    }
+
+    if (indiceReal < 0) indiceReal = totalSlides - 1;
+    if (indiceReal >= totalSlides) indiceReal = 0;
+
+    indicadores.forEach((ind) => ind.classList.remove("ativo"));
+
+    if (indicadores[indiceReal]) {
+        indicadores[indiceReal].classList.add("ativo");
+    }
+}
+
+function definirTransform(x, animar = true) {
+    if (!track) return;
+    track.style.transition = animar ? "transform 0.45s ease" : "none";
+    track.style.transform = `translateX(${x}px)`;
+}
+
+function obterTranslatePorIndice(indice) {
+    return -(indice * larguraSlide);
+}
+
+function irParaIndice(indice, animar = true) {
+    slideAtual = indice;
+    currentTranslate = obterTranslatePorIndice(slideAtual);
+    definirTransform(currentTranslate, animar);
+    atualizarIndicadores();
+}
+
+function criarClones() {
+    if (!track) return;
+
+    slidesOriginais = Array.from(track.children);
+    totalSlides = slidesOriginais.length;
+
+    if (!totalSlides) return;
+
+    const primeiroClone = slidesOriginais[0].cloneNode(true);
+    const ultimoClone = slidesOriginais[totalSlides - 1].cloneNode(true);
+
+    primeiroClone.classList.add("clone");
+    ultimoClone.classList.add("clone");
+
+    track.insertBefore(ultimoClone, slidesOriginais[0]);
+    track.appendChild(primeiroClone);
+
+    atualizarLarguraSlide();
+    irParaIndice(1, false);
 }
 
 function mudarSlide(direcao) {
-    slideAtual += direcao;
+    if (!track || estaAnimando || estaArrastando) return;
 
-    if (slideAtual < 0) {
-        slideAtual = slides.length - 1;
-    }
-
-    if (slideAtual >= slides.length) {
-        slideAtual = 0;
-    }
-
-    atualizarCarrossel();
+    estaAnimando = true;
+    irParaIndice(slideAtual + direcao, true);
 }
 
 function irParaSlide(index) {
-    slideAtual = index;
-    atualizarCarrossel();
+    if (!track || estaAnimando || estaArrastando) return;
+
+    estaAnimando = true;
+    irParaIndice(index + 1, true);
+}
+
+function corrigirLoopInfinito() {
+    if (slideAtual === totalSlides + 1) {
+        irParaIndice(1, false);
+    } else if (slideAtual === 0) {
+        irParaIndice(totalSlides, false);
+    } else {
+        atualizarIndicadores();
+    }
+
+    estaAnimando = false;
 }
 
 function iniciarCarrosselAutomatico() {
@@ -64,66 +136,106 @@ function iniciarCarrosselAutomatico() {
 }
 
 function pararCarrosselAutomatico() {
-    clearInterval(intervaloCarrossel);
+    if (intervaloCarrossel) {
+        clearInterval(intervaloCarrossel);
+        intervaloCarrossel = null;
+    }
+}
+
+// ===== ARRASTO TIPO STORIES =====
+
+function iniciarArrasto(clientX) {
+    if (!track || estaAnimando) return;
+
+    estaArrastando = true;
+    startX = clientX;
+    currentX = clientX;
+    startTranslate = obterTranslateAtual();
+    currentTranslate = startTranslate;
+
+    track.style.transition = "none";
+    pararCarrosselAutomatico();
+}
+
+function moverArrasto(clientX) {
+    if (!estaArrastando || !track) return;
+
+    currentX = clientX;
+    const deslocamento = currentX - startX;
+    currentTranslate = startTranslate + deslocamento;
+
+    definirTransform(currentTranslate, false);
+}
+
+function finalizarArrasto() {
+    if (!estaArrastando || !track) return;
+
+    const deslocamentoFinal = currentX - startX;
+    const limiteTroca = larguraSlide * 0.18;
+
+    estaArrastando = false;
+
+    if (deslocamentoFinal < -limiteTroca) {
+        estaAnimando = true;
+        irParaIndice(slideAtual + 1, true);
+    } else if (deslocamentoFinal > limiteTroca) {
+        estaAnimando = true;
+        irParaIndice(slideAtual - 1, true);
+    } else {
+        definirTransform(obterTranslatePorIndice(slideAtual), true);
+    }
+
+    iniciarCarrosselAutomatico();
+}
+
+function obterTranslateAtual() {
+    const style = window.getComputedStyle(track);
+    const matrix = new DOMMatrixReadOnly(style.transform);
+    return matrix.m41;
+}
+
+// ===== EVENTOS =====
+
+if (track) {
+    track.addEventListener("transitionend", corrigirLoopInfinito);
 }
 
 if (carrossel) {
     carrossel.addEventListener("mouseenter", pararCarrosselAutomatico);
     carrossel.addEventListener("mouseleave", iniciarCarrosselAutomatico);
+
+    carrossel.addEventListener("touchstart", (e) => {
+        iniciarArrasto(e.touches[0].clientX);
+    }, { passive: true });
+
+    carrossel.addEventListener("touchmove", (e) => {
+        moverArrasto(e.touches[0].clientX);
+    }, { passive: true });
+
+    carrossel.addEventListener("touchend", finalizarArrasto);
+
+    carrossel.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        iniciarArrasto(e.clientX);
+    });
+
+    window.addEventListener("mousemove", (e) => {
+        if (!estaArrastando) return;
+        moverArrasto(e.clientX);
+    });
+
+    window.addEventListener("mouseup", () => {
+        if (estaArrastando) finalizarArrasto();
+    });
 }
 
-atualizarCarrossel();
+window.addEventListener("resize", () => {
+    atualizarLarguraSlide();
+    definirTransform(obterTranslatePorIndice(slideAtual), false);
+});
+
+criarClones();
 iniciarCarrosselAutomatico();
-
-
-// DESLIZAR O CARROSSEL COM O DEDO NO MOBILE
-
-let toqueInicialX = 0;
-let toqueFinalX = 0;
-let arrastando = false;
-
-function iniciarToque(e) {
-    toqueInicialX = e.touches[0].clientX;
-    toqueFinalX = toqueInicialX;
-    arrastando = true;
-    pararCarrosselAutomatico();
-}
-
-function moverToque(e) {
-    if (!arrastando) return;
-    toqueFinalX = e.touches[0].clientX;
-}
-
-function finalizarToque() {
-    if (!arrastando) return;
-
-    const distancia = toqueFinalX - toqueInicialX;
-    const limiteMinimo = 50;
-
-    if (Math.abs(distancia) > limiteMinimo) {
-        if (distancia < 0) {
-            mudarSlide(1);
-        } else {
-            mudarSlide(-1);
-        }
-    }
-
-    arrastando = false;
-    toqueInicialX = 0;
-    toqueFinalX = 0;
-
-    iniciarCarrosselAutomatico();
-}
-
-if (carrossel) {
-    const viewport = document.querySelector(".carrossel-viewport");
-
-    if (viewport) {
-        viewport.addEventListener("touchstart", iniciarToque, { passive: true });
-        viewport.addEventListener("touchmove", moverToque, { passive: true });
-        viewport.addEventListener("touchend", finalizarToque);
-    }
-}
 
 // TEMA AUTOMÁTICO CONFORME O SISTEMA
 
@@ -283,3 +395,65 @@ window.addEventListener("resize", () => {
         fecharMenuMobile();
     }
 });
+
+// HEADER INTELIGENTE NO MOBILE
+
+const header = document.querySelector(".topo-site");
+let ultimoScroll = window.scrollY;
+
+function controlarHeaderMobile() {
+    if (!header) return;
+    if (window.innerWidth > 768) return;
+
+    const scrollAtual = window.scrollY;
+
+    if (scrollAtual <= 20) {
+        header.classList.remove("header-escondida");
+        ultimoScroll = scrollAtual;
+        return;
+    }
+
+    if (scrollAtual > ultimoScroll && scrollAtual > 80) {
+        header.classList.add("header-escondida");
+    } else {
+        header.classList.remove("header-escondida");
+    }
+
+    ultimoScroll = scrollAtual;
+}
+
+window.addEventListener("scroll", controlarHeaderMobile);
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768 && header) {
+        header.classList.remove("header-escondida");
+    }
+});
+
+// ANO AUTOMÁTICO NO FOOTER
+
+const anoAtual = document.getElementById("ano-atual");
+
+if (anoAtual) {
+    anoAtual.textContent = new Date().getFullYear();
+}
+
+// SEÇÃO CONVÊNIOS 
+
+const botaoVerConvenios = document.getElementById("botao-ver-convenios");
+const listaConveniosCompleta = document.getElementById("lista-convenios-completa");
+
+if (botaoVerConvenios && listaConveniosCompleta) {
+    botaoVerConvenios.addEventListener("click", () => {
+        const estaOculta = listaConveniosCompleta.hasAttribute("hidden");
+
+        if (estaOculta) {
+            listaConveniosCompleta.removeAttribute("hidden");
+            botaoVerConvenios.textContent = "Ocultar convênios";
+            botaoVerConvenios.setAttribute("aria-expanded", "true");
+        } else {
+            listaConveniosCompleta.setAttribute("hidden", "");
+            botaoVerConvenios.textContent = "Ver todos os convênios";
+            botaoVerConvenios.setAttribute("aria-expanded", "false");
+        }
+    });
+}

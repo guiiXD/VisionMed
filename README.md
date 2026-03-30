@@ -5,31 +5,37 @@ O projeto prioriza navegação intuitiva, comunicação clara e facilitação do
 
 Construído com HTML, CSS e JavaScript puro, o site incorpora recursos modernos como dark mode automático, carrossel interativo customizado e layout totalmente responsivo.
 
-## 📸 Preview do Projeto
+<h2 align="center">📸 Preview do Projeto</h2>
 
-### 🌞 Modo Claro
+<h3>🌞 Modo Claro</h3>
 
-**Banner**
-![Banner Claro](imagens/banner.png)
+<p align="center">
+  <img src="imagens/banner.png" width="800" alt="Banner modo claro">
+</p>
 
-**Carrossel**
-![Carrossel Claro](imagens/carrossel.png)
+<p align="center">
+  <img src="imagens/carrossel.png" width="800" alt="Carrossel modo claro">
+</p>
 
-**Convênios**
-![Convênios Claro](imagens/convenios.png)
+<p align="center">
+  <img src="imagens/convenios.png" width="800" alt="Convênios modo claro">
+</p>
 
 ---
 
-### 🌙 Modo Escuro
+<h3>🌙 Modo Escuro</h3>
 
-**Banner**
-![Banner Escuro](imagens/bannerdark.png)
+<p align="center">
+  <img src="imagens/bannerdark.png" width="800" alt="Banner modo escuro">
+</p>
 
-**Carrossel**
-![Carrossel Escuro](imagens/carrosseldark.png)
+<p align="center">
+  <img src="imagens/carrosseldark.png" width="800" alt="Carrossel modo escuro">
+</p>
 
-**Convênios**
-![Convênios Escuro](imagens/conveniosdark.png)
+<p align="center">
+  <img src="imagens/conveniosdark.png" width="800" alt="Convênios modo escuro">
+</p>
 
 ## 📌 Sobre o Projeto
 
